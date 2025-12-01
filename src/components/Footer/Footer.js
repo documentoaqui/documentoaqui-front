@@ -21,6 +21,9 @@ const Footer = () => {
           <p style={{ margin: 0 }}>
             Os documentos emitidos, prazos e informações são de responsabilidade exclusiva do órgão emissor.
           </p>
+          <p style={{ margin: 0, fontWeight: 'bold' }}>
+           As certidões, documentos e pesquisas também podem ser solicitadas diretamente pelo usuário aos órgãos públicos competentes, sem a intermediação da Documentos aqui. Leia as políticas do site.
+          </p>
         </div>
 
         <nav className={styles.footerLinks}>

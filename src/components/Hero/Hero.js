@@ -8,12 +8,12 @@ const Hero = () => {
         <div className={styles.content}>
           <div className={styles.titleWrapper}>
             <h1 className={styles.title}>
-              Certidões solicitadas online, de forma rápida e segura
+              Solicitar certidões não precisa ser burocrático.
             </h1>
           </div>
           <p className={styles.subtitle}>
-          Serviço privado que facilita a solicitação,
-           busca e entrega de documentos em todo o Brasil
+          Você faz tudo online, com rapidez e segurança.
+          Nós cuidamos do processo junto aos órgãos emissores para evitar filas, exigências e retrabalhos.
           </p>
           <button className={styles.ctaButton}>
             SOLICITE AGORA

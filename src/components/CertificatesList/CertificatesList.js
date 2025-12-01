@@ -56,7 +56,7 @@ const CertificatesList = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-            <h2 className={styles.title}>Solicitamos certidões oficiais diretamente nos órgãos públicos emissores em nome do usuário</h2>
+            <h2 className={styles.title}>Facilitamos a solicitação de certidões oficiais junto aos órgãos públicos emissores, atuando como serviço privado de intermediação.</h2>
             <div className={styles.searchContainer}>
                 <div className={styles.searchInputWrapper}>
                     <SearchIcon />
