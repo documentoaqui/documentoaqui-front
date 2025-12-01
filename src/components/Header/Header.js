@@ -67,7 +67,7 @@ const Header = () => {
             <li><Link href="/certidoes">Certidões</Link></li>
             <li><Link href="/sobre-nos">Sobre Nós</Link></li>
             <li><Link href="/contato">Contato</Link></li>
-            <li><Link href="/assessoria">Suporte Juridico</Link></li>
+            <li><Link href="/assessoria">Como Funciona</Link></li>
             
             {/* Seção da conta DENTRO do menu mobile */}
             <li className={styles.mobileOnlyAccountSection}>
