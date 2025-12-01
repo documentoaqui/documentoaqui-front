@@ -18,7 +18,7 @@ const Footer = () => {
           <p style={{ marginBottom: '0.5rem' }}>
             Atuamos para facilitar o acesso do usuário a esses serviços, com suporte especializado.
           </p>
-          <p style={{ margin: 0 }}>
+          <p style={{ margin: 0, marginBottom: '0.5rem' }}>
             Os documentos emitidos, prazos e informações são de responsabilidade exclusiva do órgão emissor.
           </p>
           <p style={{ margin: 0, fontWeight: 'bold' }}>
