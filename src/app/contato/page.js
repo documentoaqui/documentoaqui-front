@@ -28,7 +28,7 @@ export default function ContatoPage() {
       Neste caso, o remetente deverá informar o assunto, a providência a ser tomada, o número do protocolo do pedido e demais informações que julgue necessárias.
     </p><br></br>
     <p><b>Quando usar este canal:</b></p>
-    <ul>
+    <ul style={{paddingLeft: '1.5rem'}}>
       <li>Dúvidas sobre qual certidão escolher</li>
       <li>Informações sobre prazos e procedimentos</li>
       <li>Perguntas sobre documentos necessários</li>
