@@ -3,7 +3,7 @@
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 // import FormSection from "@/components/FormSection/FormSection";
-import styles from '../contato/ContactPage.module.css'; // Reutiliza o estilo da página de contato
+import styles from '../contato/ContactPage.module.css';
 
 export const metadata = {
   title: "Suporte Juridico - E-Certidões",
