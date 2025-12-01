@@ -23,7 +23,7 @@ export default function ContatoPage() {
     </p><br></br>
     <p>
       <b>Importante:</b> Caso haja necessidade de envio de documentos à Documento Aqui (arquivos de imagens, textos, etc), estes poderão ser enviados em PDF, JPG e Word ao e-mail: contato@documentoaqui.com.br.
-    </p>
+    </p><br></br>
     <p>
       Neste caso, o remetente deverá informar o assunto, a providência a ser tomada, o número do protocolo do pedido e demais informações que julgue necessárias.
     </p><br></br>
