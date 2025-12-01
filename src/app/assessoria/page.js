@@ -14,7 +14,7 @@ export default function AssessoriaJuridicaPage() {
 
       <main className={styles.pageWrapper}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Suporte Jurídico</h1>
+          <h1 className={styles.title}>Como Funciona</h1>
 
           <div className={styles.content}>
             <p>
