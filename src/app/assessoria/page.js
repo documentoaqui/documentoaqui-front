@@ -3,8 +3,8 @@ import Footer from "@/components/Footer/Footer";
 import styles from '../politica-de-privacidade/PrivacyPolicy.module.css';
 
 export const metadata = {
-  title: "Suporte Jurídico - Documento Aqui",
-  description: "Informações detalhadas sobre o suporte jurídico da Documento Aqui.",
+  title: "Como Funciona - Documento Aqui",
+  description: "Informações detalhadas sobre o funcionamento da aplicação.",
 };
 
 export default function AssessoriaJuridicaPage() {
