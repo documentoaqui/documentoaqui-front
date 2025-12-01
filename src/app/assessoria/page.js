@@ -122,16 +122,16 @@ export default function AssessoriaJuridicaPage() {
 
 
 
-  return (
-    <div className={styles.fullPageContainer}>
-      <Header />
-      {/* <FormSection
-        imageSrc="/acessor.png"
-        imageAlt="Advogado sorrindo em um escritório"
-        title="Suporte Juridico"
-        description={assessoriaDescription}
-      /> */}
-      <Footer />
-    </div>
-  );
+  // return (
+  //   <div className={styles.fullPageContainer}>
+  //     <Header />
+  //     <FormSection
+  //       imageSrc="/acessor.png"
+  //       imageAlt="Advogado sorrindo em um escritório"
+  //       title="Suporte Juridico"
+  //       description={assessoriaDescription}
+  //     />
+  //     <Footer />
+  //   </div>
+  // );
 }
