@@ -26,7 +26,7 @@ export default function ContatoPage() {
     </p>
     <p>
       Neste caso, o remetente deverá informar o assunto, a providência a ser tomada, o número do protocolo do pedido e demais informações que julgue necessárias.
-    </p>
+    </p><br>
     <p><b>Quando usar este canal:</b></p>
     <ul>
       <li>Dúvidas sobre qual certidão escolher</li>
@@ -36,9 +36,9 @@ export default function ContatoPage() {
       <li>Orientações sobre acompanhamento e entrega</li>
       <li>Esclarecimentos gerais sobre o funcionamento do serviço de intermediação</li>
       <li>Suporte em caso de divergências, erros, exigências ou atualizações do órgão emissor</li>
-    </ul>
+    </ul><br>
 
-    <h4><b>Nosso compromisso com você</b></h4>
+    <p><b>Nosso compromisso com você</b></p>
     <p>A equipe da Documento Aqui é especializada na intermediação de pedidos de certidões e documentos oficiais. Analisamos cada solicitação individualmente para garantir que os dados sejam enviados corretamente aos órgãos emissores, oferecendo atendimento humanizado, transparente e eficiente.</p>
     </div>
   );
