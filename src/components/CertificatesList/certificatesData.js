@@ -392,13 +392,7 @@ export const allCertificates = [
         pessoa: [],
         empresa: [
           { name: 'cnpj', label: 'CNPJ', type: 'text' },
-          { name: 'cei_opcional', label: 'CEI (Opcional)', type: 'text' },
-          { 
-            name: 'estado',
-            label: 'Estado',
-            type: 'select',
-            options: ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO']
-          }
+          { name: 'cei_opcional', label: 'CEI (Opcional)', type: 'text' }
         ]
       }
     },
