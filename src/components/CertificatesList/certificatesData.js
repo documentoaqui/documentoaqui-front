@@ -385,18 +385,13 @@ export const allCertificates = [
       } 
     },
     { id: 9, name: 'Certidão de Débitos Trabalhistas (MT)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
-    { id: 11,
-      name: 'Certidão Negativa do FGTS',
-      esfera: 'Federal',
-      govFormFields: {
-        pessoa: [],
-        empresa: [
-          { name: 'cnpj', label: 'CNPJ', type: 'text' },
-          { name: 'cei_opcional', label: 'CEI (Opcional)', type: 'text' }
-        ]
-      }
+    
+    { id: 11, name: 'Certidão Negativa do FGTS', esfera: 'Federal', 
+      govFormFields: { 
+        pessoa: [], 
+        empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei', label: 'CEI (Opcional)' }] 
+      } 
     },
-
     { id: 12, name: 'Cadastro de Imóveis Rurais (CAFIR)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'nirf_cib', label: 'NIRF / CIB' }], empresa: [] } },
     { id: 13, name: 'Certidão de Tributos Federais de Imóvel Rural (ITR)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'nirf', label: 'NIRF' }], empresa: [] } },
     { id: 14, name: 'Certidão de Embargos (IBAMA)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
