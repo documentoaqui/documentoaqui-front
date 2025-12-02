@@ -19,7 +19,7 @@ export default function AssessoriaJuridicaPage() {
         <li><b>Escolha do documento</b></li>
         <p>O usuário acessa a lista de certidões disponíveis e seleciona o tipo desejado, como:</p>
 
-        <ul>
+        <ul style={{paddingLeft: '1.5rem'}}>
           <li>Certidões de registro civil (nascimento, casamento, óbito)</li>
           <li>Matrícula de imóvel e visualização</li>
           <li>Certidões estaduais, federais e municipais</li>
@@ -32,7 +32,7 @@ export default function AssessoriaJuridicaPage() {
         <li><b>Preenchimento dos dados</b></li>
         <p>Em cada pedido, o usuário informa:</p>
 
-        <ul>
+        <ul style={{paddingLeft: '1.5rem'}}>
           <li>Estado e cidade onde o documento está localizado</li>
           <li>Dados do registro (CPF, RG, dados do imóvel, número de matrícula etc.)</li>
           <li>Nome completo, CPF, endereço, telefone e e-mail</li>
@@ -43,7 +43,7 @@ export default function AssessoriaJuridicaPage() {
           Quando exigido pela LGPD (ex: <b>certidões em inteiro teor</b> do Registro Civil), o usuário também:
         </p>
 
-        <ul>
+        <ul style={{paddingLeft: '1.5rem'}}>
           <li>Autoriza o tratamento dos dados pessoais</li>
           <li>Envia <b>procuração eletrônica</b> para que a equipe jurídica possa requerer o documento em seu nome</li>
         </ul>
@@ -51,7 +51,7 @@ export default function AssessoriaJuridicaPage() {
         <li><b>Envio seguro do pedido</b></li>
       <p>Após preencher os dados:</p>
 
-        <ul>
+        <ul style={{paddingLeft: '1.5rem'}}>
           <li>O pedido é registrado na plataforma</li>
           <li>O usuário recebe número de acompanhamento</li>
           <li>Nossa equipe revisa as informações antes do envio ao órgão emissor</li>
@@ -62,11 +62,11 @@ export default function AssessoriaJuridicaPage() {
         <li><b>Pagamento</b></li>
         <p>O pagamento incluirá:</p>
 
-        <ul>
+        <ul style={{paddingLeft: '1.5rem'}}>
           <li>Taxas oficiais do órgão emissor</li>
           <li>Taxa de intermediação e suporte da Documento Aqui</li>
           <li>Custos operacionais (pesquisas físicas, acervos antigos etc.)</li>
-        <li>Custo de envio</li>
+          <li>Custo de envio</li>
           <li>Impostos</li>
         </ul>
 
@@ -75,7 +75,7 @@ export default function AssessoriaJuridicaPage() {
         <li><b>Análise e envio ao órgão público</b></li>
         <p>Nossa equipe:</p>
 
-        <ol>
+        <ol style={{paddingLeft: '1.5rem'}}>
           <li>Confirma e processa os dados</li>
           <li>Verifica requisitos do órgão</li>
           <li>Pede complemento de informações ou documentos ao usuário (se necessário)</li>
@@ -88,10 +88,10 @@ export default function AssessoriaJuridicaPage() {
         <li><b>Acompanhamento em tempo real</b></li>
         <p>O usuário pode acompanhar o pedido pelo painel e também será informado por e-mail:</p>
 
-      <ul>
+      <ul style={{paddingLeft: '1.5rem'}}>
           <li><b>Em processamento</b></li>
           <li><b>Certidão emitida</b></li>
-        <li><b>Documento digital disponível</b></li>
+          <li><b>Documento digital disponível</b></li>
           <li><b>Documento físico postado nos Correios</b></li>
           <li><b>Enviado ao e-mail</b> (quando digital)</li>
           <li><b>Rastreamento dos Correios</b></li>
@@ -101,22 +101,22 @@ export default function AssessoriaJuridicaPage() {
         <li><b>Entrega</b></li>
         <p>A entrega pode ocorrer:</p>
 
-        <ul>
+        <ul style={{paddingLeft: '1.5rem'}}>
           <li><b>Digitalmente</b>, por e-mail e no painel</li>
           <li><b>Fisicamente</b>, pelos Correios ou transportadora</li>
-      </ul>
+        </ul>
 
         <p>Você será notificado em todas as etapas.</p>
 
         <li><b>Suporte especializado</b></li>
         <p>Se houver:</p>
 
-      <ul>
+        <ul style={{paddingLeft: '1.5rem'}}>
           <li>Dúvida sobre prazos</li>
           <li>Exigências de órgão</li>
           <li>Necessidade de retificação</li>
           <li>Pedido de documentos especiais</li>
-      </ul>
+        </ul>
 
         <p>O usuário pode contatar o suporte no campo (CONTATO) da tela inicial do site.</p>
       </ol>
