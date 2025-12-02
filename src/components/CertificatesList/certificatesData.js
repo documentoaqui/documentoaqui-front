@@ -385,12 +385,17 @@ export const allCertificates = [
       } 
     },
     { id: 9, name: 'Certidão de Débitos Trabalhistas (MT)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
-    { id: 11, name: 'Certidão Negativa do FGTS', esfera: 'Federal', 
-      govFormFields: { 
-        needsState: true,
+    { id: 11,
+      name: 'Certidão Negativa do FGTS',
+      esfera: 'Federal',
+      govFormFields: {
         pessoa: [],
-        empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei_opcional', label: 'CEI (Opcional)', required: true }] 
-      } 
+        empresa: [
+          { name: 'cnpj', label: 'CNPJ' },
+          { name: 'cei_opcional', label: 'CEI (Opcional)', required: false },
+          { name: 'estado', label: 'Estado', type: 'select', options: ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'] }
+        ]
+      }
     },
     { id: 12, name: 'Cadastro de Imóveis Rurais (CAFIR)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'nirf_cib', label: 'NIRF / CIB' }], empresa: [] } },
     { id: 13, name: 'Certidão de Tributos Federais de Imóvel Rural (ITR)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'nirf', label: 'NIRF' }], empresa: [] } },
