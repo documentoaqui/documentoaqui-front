@@ -110,6 +110,14 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
             <button type="submit" className={styles.submitButton}>Enviar</button>
           </form>
         </div>
+        <p>
+          <b>Outros canais de contato</b>
+        </p>
+        <p>Para maior comodidade, você também pode falar conosco por Whatsapp:</p>
+        <ul>
+          <li>(19)99653-7342</li>
+          <li>Segunda à sexta - 09h às 18h</li>
+        </ul>
       </div>
     </section>
   );
