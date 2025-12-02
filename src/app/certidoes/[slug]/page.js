@@ -41,7 +41,7 @@ export default function CertidaoPage() {
     <>
       <Header />
       <main className={styles.pageContainer}>
-        <p style={{textAlign: 'center'}}>Serviço privado de intermediação na solicitação de documentos junto aos órgãos públicos</p>
+        <p style={{textAlign: 'center', marginbottom: '0.5rem'}}>Serviço privado de intermediação na solicitação de documentos junto aos órgãos públicos</p>
         <div className={styles.contentWrapper}>
           <ProductHeader 
             title={certificate.name}
