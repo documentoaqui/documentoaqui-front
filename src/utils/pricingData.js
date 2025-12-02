@@ -47,15 +47,15 @@ export const pricingData = {
       { "estado": "SE", "certidao_imovel": 228.30, "visualizacao_matricula": 84.30, "pesquisa_previa": null, "pesquisa_qualificada": 88.30 },
       { "estado": "AL", "certidao_imovel": 198.30, "visualizacao_matricula": 78.30, "pesquisa_previa": null, "pesquisa_qualificada": null },
       { "estado": "PE", "certidao_imovel": 214.30, "visualizacao_matricula": 78.30, "pesquisa_previa": null, "pesquisa_qualificada": 68.30 },
-      { "estado": "PB", "certidao_imovel": 328.30, "visualizacao_matricula": 118.30, "pesquisa_previa": 118.30, "pesquisa_qualificada": 118.30 },
+      { "estado": "PB", "certidao_imovel": 328.30, "visualizacao_matricula": 118.30, "pesquisa_previa": null, "pesquisa_qualificada": 118.30 },
       { "estado": "RN", "certidao_imovel": 314.30, "visualizacao_matricula": 112.30, "pesquisa_previa": null, "pesquisa_qualificada": 83.30 },
-      { "estado": "CE", "certidao_imovel": null, "visualizacao_matricula": 78.30, "pesquisa_previa": null, "pesquisa_qualificada": 78.30 },
-      { "estado": "PI", "certidao_imovel": 214.65, "visualizacao_matricula": 98.30, "pesquisa_previa": 78.30, "pesquisa_qualificada": 98.30 },
-      { "estado": "MA", "certidao_imovel": null, "visualizacao_matricula": 98.30, "pesquisa_previa": null, "pesquisa_qualificada": null },
+      { "estado": "CE", "certidao_imovel": 287.40, "visualizacao_matricula": 78.30, "pesquisa_previa": null, "pesquisa_qualificada": 78.30 },
+      { "estado": "PI", "certidao_imovel": 214.65, "visualizacao_matricula": 98.30, "pesquisa_previa": null, "pesquisa_qualificada": 98.30 },
+      { "estado": "MA", "certidao_imovel": 287.40, "visualizacao_matricula": 98.30, "pesquisa_previa": null, "pesquisa_qualificada": null },
       { "estado": "PA", "certidao_imovel": 214.30, "visualizacao_matricula": 98.30, "pesquisa_previa": null, "pesquisa_qualificada": 78.30 },
       { "estado": "AP", "certidao_imovel": 228.30, "visualizacao_matricula": null, "pesquisa_previa": null, "pesquisa_qualificada": null },
       { "estado": "AM", "certidao_imovel": 314.30, "visualizacao_matricula": 113.30, "pesquisa_previa": null, "pesquisa_qualificada": 118.30 },
-      { "estado": "RR", "certidao_imovel": null, "visualizacao_matricula": 73.30, "pesquisa_previa": null, "pesquisa_qualificada": 78.30 }
+      { "estado": "RR", "certidao_imovel": 287.40, "visualizacao_matricula": 73.30, "pesquisa_previa": null, "pesquisa_qualificada": 78.30 }
     ]
   },
   
