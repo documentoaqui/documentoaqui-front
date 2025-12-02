@@ -132,12 +132,14 @@ export default function AssessoriaJuridicaPage() {
   return (
     <div className={styles.fullPageContainer}>
       <Header />
-      <FormSection
+      {/* <FormSection
         imageSrc="/acessor.png"
         imageAlt="Advogado sorrindo em um escritório"
         title="Como Funciona"
         description={assessoriaDescription}
-      />
+      /> */}
+        description={assessoriaDescription}
+
       <Footer />
     </div>
   );
