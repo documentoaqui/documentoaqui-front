@@ -388,7 +388,7 @@ export const allCertificates = [
     { id: 11, name: 'Certidão Negativa do FGTS', esfera: 'Federal', 
       govFormFields: { 
         pessoa: [], 
-        empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei_opcional', label: 'CEI (Opcional)', required: false }]
+        empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei_opcional', label: 'CEI (Opcional)', required: false, id: 'estado', label: 'Estado', type: 'select', required: true}]
       } 
     },
     { id: 12, name: 'Cadastro de Imóveis Rurais (CAFIR)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'nirf_cib', label: 'NIRF / CIB' }], empresa: [] } },
