@@ -133,6 +133,7 @@ export default function AssessoriaJuridicaPage() {
         imageAlt="Advogado sorrindo em um escritório"
         title="Como Funciona"
         description={assessoriaDescription}
+        hideForm={true}
       />
       <Footer />
     </div>
