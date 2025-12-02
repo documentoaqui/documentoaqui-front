@@ -16,11 +16,12 @@ export default function TermsAndConditionsPage() {
         <div className={styles.container}>
           <h1 className={styles.title}>Termos de Uso</h1>
           
-          {/* Data de atualização dinâmica ou fixa conforme necessidade */}
-          <p className={styles.updateDate}>Última atualização: {new Date().toLocaleDateString('pt-BR')}</p>
+          <p className={styles.updateDate}>
+            Última atualização: {new Date().toLocaleDateString('pt-BR')}
+          </p>
 
           <div className={styles.content}>
-            
+
             <h2 className={styles.sectionTitle}>1. Aceitação dos Termos</h2>
             <p><strong>Bem-vindo à Documento Aqui!</strong></p>
             <p>
@@ -30,15 +31,32 @@ export default function TermsAndConditionsPage() {
               A Plataforma é administrada pela <strong>PALAZZI SOCIEDADE INDIVIDUAL DE ADVOCACIA</strong>, inscrita no CNPJ nº 58.995.590/0001-10 e na OAB/SP nº 58.133.
             </p>
             <p>
+              A administradora não presta neste site qualquer serviço de consultoria ou assessoria jurídica.
+            </p>
+            <p>
               Caso não concorde com estes Termos, você deve suspender imediatamente o uso dos nossos serviços.
             </p>
 
             <h2 className={styles.sectionTitle}>2. Natureza do Serviço</h2>
             <p>
-              A <strong>Documento Aqui</strong> atua como <strong>facilitadora e intermediadora</strong> na solicitação de documentos junto a cartórios, tabelionatos, tribunais e demais órgãos públicos administrativos.
+              A <strong>Documento Aqui</strong> atua como <strong>facilitadora e intermediadora</strong> na solicitação e levantamento de documentos junto a cartórios, tabelionatos, tribunais e demais órgãos públicos administrativos.
             </p>
             <p>
               Nosso trabalho é <strong>intermediação profissional</strong>, realizado por especialistas na obtenção de documentos públicos.
+            </p>
+            <p>
+              O nosso objetivo é desburocratizar e facilitar o acesso do usuário aos emissores dos documentos.
+            </p>
+            <p>
+              Não fazemos a emissão de qualquer documento. Isso cabe ao órgão público competente. Apenas, e com a autorização do usuário:
+            </p>
+            <ul>
+              <li>a) solicitamos;</li>
+              <li>b) acompanhamos os trâmites resolvendo qualquer entrave burocrático;</li>
+              <li>c) entregamos o documento requerido em nossa plataforma.</li>
+            </ul>
+            <p>
+              A utilização do nosso serviço é opcional e consiste exclusivamente na facilitação do processo. Esclarecemos que todos os documentos disponíveis para solicitação no site podem ser requeridos pelo próprio usuário ao órgão público emissor.
             </p>
 
             <h3 style={{marginTop: '1.5rem', color: '#294B29'}}>2.1. Disclaimer de Vínculo Oficial</h3>
@@ -74,9 +92,7 @@ export default function TermsAndConditionsPage() {
             <p>
               Os pagamentos são processados por <strong>plataformas externas seguras</strong>, e não armazenamos dados financeiros em nossos servidores.
             </p>
-            <p>
-              É possível que determinados documentos exijam <strong>complemento de valores</strong>, por exemplo:
-            </p>
+            <p>É possível que determinados documentos exijam <strong>complemento de valores</strong>, por exemplo:</p>
             <ul>
               <li>buscas em acervos físicos;</li>
               <li>pesquisas acima de 10 anos;</li>
@@ -84,9 +100,7 @@ export default function TermsAndConditionsPage() {
               <li>taxas extras do órgão emissor;</li>
               <li>custos adicionais de envio.</li>
             </ul>
-            <p>
-              Quando necessário, o cliente será avisado antes do prosseguimento.
-            </p>
+            <p>Quando necessário, o cliente será avisado antes do prosseguimento.</p>
 
             <h2 className={styles.sectionTitle}>5. Prazos e Entrega</h2>
             <p>
@@ -106,39 +120,31 @@ export default function TermsAndConditionsPage() {
             </p>
             <p><strong>Prazos estimados:</strong></p>
             <ul>
-                <li>Certidões Digitais: <strong>1 a 5 dias úteis</strong></li>
-                <li>Certidões Físicas (papel): <strong>5 a 20 dias úteis + prazo dos Correios</strong></li>
-                <li>Certidões Estaduais e Federais: <strong>1 a 15 dias úteis</strong></li>
-                <li>Pesquisa por CPF/CNPJ: <strong>até 24 horas</strong></li>
-                <li>Pesquisa Qualificada de Imóveis: <strong>5 a 20 dias úteis</strong></li>
+              <li>Certidões Digitais: <strong>1 a 5 dias úteis</strong></li>
+              <li>Certidões Físicas (papel): <strong>5 a 20 dias úteis + prazo dos Correios</strong></li>
+              <li>Certidões Estaduais e Federais: <strong>1 a 15 dias úteis</strong></li>
+              <li>Pesquisa por CPF/CNPJ: <strong>até 24 horas</strong></li>
+              <li>Pesquisa Qualificada de Imóveis: <strong>5 a 20 dias úteis</strong></li>
             </ul>
 
             <h2 className={styles.sectionTitle}>6. Política de Reembolso</h2>
-            <p>
-              Regida por documento específico, disponível na plataforma.
-            </p>
+            <p>Regida por documento específico, disponível na plataforma.</p>
 
             <h2 className={styles.sectionTitle}>7. Limitação de Responsabilidade</h2>
-            <p>
-              Nosso papel é <strong>somente de intermediação</strong>.
-            </p>
+            <p>Nosso papel é <strong>somente de intermediação</strong>.</p>
             <p>Não nos responsabilizamos por:</p>
             <ul>
-                <li>atrasos;</li>
-                <li>erros;</li>
-                <li>inconsistências;</li>
-                <li>negativa de emissão;</li>
-                <li>impossibilidade de localizar documentos;</li>
+              <li>atrasos;</li>
+              <li>erros;</li>
+              <li>inconsistências;</li>
+              <li>negativa de emissão;</li>
+              <li>impossibilidade de localizar documentos;</li>
             </ul>
-            <p>
-              — todos de responsabilidade <strong>exclusiva</strong> dos cartórios e órgãos públicos.
-            </p>
+            <p>— todos de responsabilidade <strong>exclusiva</strong> dos cartórios e órgãos públicos.</p>
             <p>
               Em caso de <strong>retificação de certidão</strong>, o usuário deve tratar diretamente com o órgão emissor. Nosso departamento jurídico pode auxiliar mediante solicitação.
             </p>
-            <p>
-                Contato Jurídico: WhatsApp <strong>(19) 99915-8230</strong>
-            </p>
+            <p>Contato Jurídico: WhatsApp <strong>(19) 99915-8230</strong></p>
 
             <h2 className={styles.sectionTitle}>8. Propriedade Intelectual</h2>
             <p>
@@ -148,15 +154,14 @@ export default function TermsAndConditionsPage() {
             <h2 className={styles.sectionTitle}>9. Contatos</h2>
             <p><strong>Questões gerais, suporte e pedidos:</strong></p>
             <ul>
-                <li>Email: <strong>contato@documentoaqui.com.br</strong></li>
-                <li>WhatsApp: <strong>(19) 99653-7342</strong></li>
-                <li>Horário: Segunda a Sexta, das 9h às 18h</li>
+              <li>Email: <strong>contato@documentoaqui.com.br</strong></li>
+              <li>WhatsApp: <strong>(19) 99653-7342</strong></li>
+              <li>Horário: Segunda a Sexta, das 9h às 18h</li>
             </ul>
-
             <p><strong>Suporte Jurídico:</strong></p>
             <ul>
-                <li>WhatsApp: <strong>(19) 99915-8230</strong></li>
-                <li>Horário: Segunda a Sexta das 9h às 17h / Sábado das 9h às 12h</li>
+              <li>WhatsApp: <strong>(19) 99915-8230</strong></li>
+              <li>Horário: Segunda a Sexta das 9h às 17h / Sábado das 9h às 12h</li>
             </ul>
 
             <h2 className={styles.sectionTitle}>10. Alterações dos Termos</h2>
