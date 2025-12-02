@@ -35,7 +35,7 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
           <div className={styles.description}>
             {description}
           </div>
-
+          {!hideForm && (
           <form onSubmit={handleSubmit} className={styles.form} style={{marginBottom: '1.5rem'}}>
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
@@ -109,6 +109,7 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
 
             <button type="submit" className={styles.submitButton}>Enviar</button>
           </form>
+          )}
           <p style={{marginBottom: '0.5rem'}}>
             <b>Outros canais de contato</b>
           </p>
