@@ -114,7 +114,7 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
           </p>
           <p>Para maior comodidade, você também pode falar conosco por Whatsapp:</p>
           <p>(19)99653-7342</p>
-          <p>Segunda à sexta - 09h às 18h</p>
+          <p>Segunda à sexta das 09h às 18h</p>
         </div>
       </div>
     </section>
