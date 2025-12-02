@@ -135,9 +135,9 @@ export default function AssessoriaJuridicaPage() {
         description={assessoriaDescription}
       />
       <Footer />
-      <style jsx>{`
+      <style jsx global>{`
         .formSectionContainer form {
-          display: none;
+          display: none !important;
         }
       `}</style>
     </div>
