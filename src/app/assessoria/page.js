@@ -1,6 +1,6 @@
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import styles from '../contato/ContactPage.module.css'; // Reutiliza o estilo da página de contato
+import styles from '../contato/ContactPage.module.css';
 
 export const metadata = {
   title: "Como Funciona - Documento Aqui",
@@ -127,10 +127,15 @@ export default function AssessoriaJuridicaPage() {
   return (
     <div className={styles.fullPageContainer}>
       <Header />
-      <main className={styles.pageContent}>
-        <h1>Como Funciona</h1>
-        {assessoriaDescription}
-      </main>
+      <div className={styles.assessoriaContainer}>
+        <div className={styles.assessoriaImage}>
+          <img src="/acessor.png" alt="Advogado sorrindo em um escritório" />
+        </div>
+        <div className={styles.assessoriaContent}>
+          <h1>Como Funciona</h1>
+          {assessoriaDescription}
+        </div>
+      </div>
       <Footer />
     </div>
   );
