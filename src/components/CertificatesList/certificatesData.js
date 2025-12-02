@@ -378,7 +378,7 @@ export const allCertificates = [
     { id: 5, name: 'Certidão de Antecedentes Criminais', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'nome_completo', label: 'Nome Completo'}, { name: 'cpf', label: 'CPF' }, { name: 'data_nascimento', label: 'Data de Nascimento', type: 'date' }, { name: 'nome_mae', label: 'Nome da Mãe' }], empresa: [] } },
     { id: 6, name: 'Certidão Negativa do Ministério Público Federal (MPF)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
     { id: 7, name: 'Certidão Negativa de Débitos Trabalhistas (CNDT-TST)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
-    { id: 8, name: 'Certidão de Cumprimento da Cota de PCDs (MT)', esfera: 'Federal', govFormFields: { pessoa: [], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
+    { id: 8, name: 'Certidão de Cumprimento da Cota de PCDs (MT)', esfera: 'Federal', govFormFields: { pessoa: [{name: 'cnpj', label: 'CNPJ'}], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
     { id: 9, name: 'Certidão de Débitos Trabalhistas (MT)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
     { id: 11, name: 'Certidão Negativa do FGTS', esfera: 'Federal', govFormFields: { needsState: true, pessoa: [], empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei_opcional', label: 'CEI (Opcional)', required: false }] } },
     { id: 12, name: 'Cadastro de Imóveis Rurais (CAFIR)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'nirf_cib', label: 'NIRF / CIB' }], empresa: [] } },
