@@ -83,7 +83,7 @@ export default function AssessoriaJuridicaPage() {
               <li><b>Análise e envio ao órgão público</b></li>
               <p>Nossa equipe:</p>
 
-              <ol>
+              <ol style={{paddingLeft: '1.5 rem'}}>
                 <li>Confirma e processa os dados</li>
                 <li>Verifica requisitos do órgão</li>
                 <li>Pede complemento de informações ou documentos ao usuário (se necessário)</li>
