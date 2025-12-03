@@ -24,7 +24,7 @@ export const categories = [
   'Cartório de Protesto',
   'Certidões Federais e Estaduais',
   'Certidões Municipais',
-  'Suporte Juridico',
+  // 'Suporte Juridico',
   'Pesquisa'
 ];
 
