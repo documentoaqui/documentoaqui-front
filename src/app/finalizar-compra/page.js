@@ -31,12 +31,10 @@ const DetailItem = ({ label, value }) => {
     );
 };
 
-// *** COMPONENTE ATUALIZADO para exibir os arquivos anexados ***
 const OrderSummaryCard = ({ item, onRemove }) => {
     if (!item || !item.formData) return null;
-    // *** CORREÇÃO: Lê 'attachedFiles' (plural) do item do carrinho ***
     const { formData, attachedFiles } = item;
-    
+
     const excludeKeys = new Set([
         'aceite_lgpd', 'ciente', 'tipo_pesquisa', 'tipo_pessoa', 'tipo_certidao',
         'requerente_nome', 'requerente_cpf', 'requerente_email', 'requerente_telefone', 'requerente_rg',
@@ -55,19 +53,18 @@ const OrderSummaryCard = ({ item, onRemove }) => {
             <div className={styles.summaryCardHeader}>
                 <h4 className={styles.summaryCardTitle}>{item.name}</h4>
                 <button onClick={() => onRemove(item.cartId)} className={styles.deleteButton} title="Remover item">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                    </svg>
                 </button>
             </div>
             <div className={styles.summaryCardBody}>
                 <DetailItem label="Estado" value={formData.estado_cartorio} />
                 <DetailItem label="Cidade" value={formData.cidade_cartorio} />
                 <DetailItem label="Cartório" value={formData.todos_cartorios_protesto ? `Todos os cartórios de ${formData.cidade_cartorio}` : (formData.cartorio_protesto || formData.cartorio)} />
-
                 {allDetails.map(([key, value]) => (
                     <DetailItem key={key} label={formatLabel(key)} value={value} />
                 ))}
-
-                {/* ADICIONADO: Seção para exibir os arquivos anexados */}
                 {attachedFiles && attachedFiles.length > 0 && (
                     <div className={styles.summaryAttachments}>
                         <strong>Anexos:</strong>
@@ -112,7 +109,6 @@ export default function CheckoutPage() {
         setClientData(prev => ({ ...prev, [name]: value }));
     };
 
-    // *** CORREÇÃO CRÍTICA AQUI ***
     const handleFinalizarCompra = async (e) => {
         e.preventDefault();
         if (!isAuthenticated) {
@@ -123,31 +119,23 @@ export default function CheckoutPage() {
 
         try {
             const orderFormData = new FormData();
-            
-            // Prepara os dados dos itens, removendo os objetos de arquivo do JSON
+
             const itensParaApi = cartItems.map(item => {
                 const { attachedFiles, ...itemData } = item;
                 return itemData;
             });
-            
             orderFormData.append('itens', JSON.stringify(itensParaApi));
             orderFormData.append('dadosCliente', JSON.stringify(clientData));
 
-            // Itera sobre CADA item do carrinho e, se houver arquivos, itera sobre eles
             cartItems.forEach((item) => {
-                // CORREÇÃO: Verifica o array 'attachedFiles'
-                if (item.attachedFiles && Array.isArray(item.attachedFiles) && item.attachedFiles.length > 0) {
-                    // Itera sobre cada arquivo dentro do array
+                if (item.attachedFiles && Array.isArray(item.attachedFiles)) {
                     item.attachedFiles.forEach(file => {
-                        // Anexa CADA arquivo ao FormData. O backend (multer) receberá um array de arquivos.
                         orderFormData.append('anexosCliente', file, file.name);
                     });
                 }
             });
 
-            // Envia o pedido usando FormData
             const pedidoResponse = await api.post('/pedidos', orderFormData);
-            
             const novoPedido = pedidoResponse.data.pedido;
 
             clearCart();
@@ -155,10 +143,31 @@ export default function CheckoutPage() {
             const checkoutResponse = await api.post('/pagamentos/criar-checkout', {
                 pedidoId: novoPedido.id
             });
-            
+
             const { checkoutUrl } = checkoutResponse.data;
 
-            window.location.href = checkoutUrl;
+            if (activePayment === 'pix') {
+                // Abre PIX em nova aba
+                window.open(checkoutUrl, '_blank');
+                alert('Pagamento PIX gerado! Assim que confirmado, você será redirecionado para “Meus Pedidos”.');
+
+                // Polling para status do pedido
+                const interval = setInterval(async () => {
+                    try {
+                        const statusRes = await api.get(`/pedidos/${novoPedido.id}/status`);
+                        if (statusRes.data.status === 'aprovado') {
+                            clearInterval(interval);
+                            router.push('/minha-conta/painel'); // redireciona para "Meus Pedidos"
+                        }
+                    } catch (err) {
+                        console.error('Erro ao consultar status do pedido', err);
+                    }
+                }, 5000);
+
+            } else {
+                // Cartão ou boleto
+                window.location.href = checkoutUrl;
+            }
 
         } catch (err) {
             console.error("Erro ao finalizar a compra:", err.response?.data || err.message);
@@ -166,18 +175,18 @@ export default function CheckoutPage() {
             setLoading(false);
         }
     };
-    
+
     const handleAuthSuccess = () => {
         setShowAuthModal(false);
         if (user) {
-             setClientData(prev => ({ ...prev, nome: user.nome || '', email: user.email || '' }));
+            setClientData(prev => ({ ...prev, nome: user.nome || '', email: user.email || '' }));
         }
     };
-    
+
     if (!isClient || authLoading) {
         return <PageLoader />; 
     }
-    
+
     const subtotal = cartItems.reduce((acc, item) => acc + (item.price || 0), 0);
     const total = subtotal;
 
@@ -203,7 +212,7 @@ export default function CheckoutPage() {
                                     <div className={styles.formGroup}><label>E-mail*</label><input type="email" name="email" value={clientData.email} onChange={handleChange} required placeholder="seuemail@dominio.com"/></div>
                                     <div className={styles.formGroup}><label>Telefone*</label><input type="tel" name="telefone" value={clientData.telefone} onChange={handleChange} required placeholder="(00) 00000-0000"/></div>
                                 </div>
-                                
+
                                 <div className={styles.detailsBox}>
                                     <h2>Pagamento</h2>
                                     <div className={styles.paymentTabs}>
