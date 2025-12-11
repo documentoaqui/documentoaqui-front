@@ -39,24 +39,24 @@ export default function TermsAndConditionsPage() {
 
             <h2 className={styles.sectionTitle}>2. Natureza do Serviço</h2>
             <p>
-              A <strong>Documento Aqui</strong> atua como <strong>facilitadora e intermediadora</strong> na solicitação e levantamento de documentos junto a cartórios, tabelionatos, tribunais e demais órgãos públicos administrativos.
+              A <strong>Documento Aqui</strong> atua como <strong> intermediadora</strong> na solicitação e levantamento de documentos junto a cartórios, tabelionatos, tribunais e demais órgãos públicos administrativos.
             </p>
             <p>
               Nosso trabalho é <strong>intermediação profissional</strong>, realizado por especialistas na obtenção de documentos públicos.
             </p>
             <p>
-              O nosso objetivo é desburocratizar e facilitar o acesso do usuário aos emissores dos documentos.
+              O nosso objetivo é oferecer um meio organizado e centralizado para o envio das solicitações aos órgãos emissores.
             </p>
             <p>
               Não fazemos a emissão de qualquer documento. Isso cabe ao órgão público competente. Apenas, e com a autorização do usuário:
             </p>
             <ul>
               <li>a) solicitamos;</li>
-              <li>b) acompanhamos os trâmites resolvendo qualquer entrave burocrático;</li>
+              <li>b) acompanhamos os trâmites orientando o usuário em caso de solicitações adicionais do órgão emissor;</li>
               <li>c) entregamos o documento requerido em nossa plataforma.</li>
             </ul>
             <p>
-              A utilização do nosso serviço é opcional e consiste exclusivamente na facilitação do processo. Esclarecemos que todos os documentos disponíveis para solicitação no site podem ser requeridos pelo próprio usuário ao órgão público emissor.
+              A utilização do nosso serviço é opcional e consiste exclusivamente na intermediação do envio das solicitações. Esclarecemos que todos os documentos disponíveis para solicitação no site podem ser requeridos pelo próprio usuário ao órgão público emissor.
             </p>
 
             <h3 style={{marginTop: '1.5rem', color: '#294B29'}}>2.1. Disclaimer de Vínculo Oficial</h3>
@@ -67,7 +67,7 @@ export default function TermsAndConditionsPage() {
               Não possuímos qualquer relação de parceria, vínculo institucional ou convênio com essas entidades.
             </p>
             <p>
-              Somos uma <strong>empresa que desburocratiza e simplifica</strong> o acesso do usuário aos documentos emitidos por órgãos públicos.
+              Somos uma empresa privada que organiza e intermedia a solicitação de documentos junto aos órgãos responsáveis.
             </p>
 
             <h2 className={styles.sectionTitle}>3. Cadastro e Conta</h2>
@@ -85,7 +85,7 @@ export default function TermsAndConditionsPage() {
             <p>Os valores cobrados incluem:</p>
             <ul>
               <li>a) emolumentos e taxas oficiais cobradas pelos órgãos emissores;</li>
-              <li>b) taxa de intermediação, assessoria e suporte da Documento Aqui;</li>
+              <li>b) taxa de intermediação e suporte operacional;</li>
               <li>c) custos de envio;</li>
               <li>d) impostos aplicáveis.</li>
             </ul>
@@ -123,7 +123,6 @@ export default function TermsAndConditionsPage() {
               <li>Certidões Digitais: <strong>1 a 5 dias úteis</strong></li>
               <li>Certidões Físicas (papel): <strong>5 a 20 dias úteis + prazo dos Correios</strong></li>
               <li>Certidões Estaduais e Federais: <strong>1 a 15 dias úteis</strong></li>
-              <li>Pesquisa por CPF/CNPJ: <strong>até 24 horas</strong></li>
               <li>Pesquisa Qualificada de Imóveis: <strong>5 a 20 dias úteis</strong></li>
             </ul>
 
@@ -134,17 +133,12 @@ export default function TermsAndConditionsPage() {
             <p>Nosso papel é <strong>somente de intermediação</strong>.</p>
             <p>Não nos responsabilizamos por:</p>
             <ul>
-              <li>atrasos;</li>
-              <li>erros;</li>
+              <li>erros e inconsistências provenientes de informações prestadas pelo requerente do documento, bem como de órgãos emissores;</li>
+              <li>atrasos, negativa de emissão e impossibilidade de localização dos documentos pelos órgãos públicos emissores;</li>
               <li>inconsistências;</li>
-              <li>negativa de emissão;</li>
-              <li>impossibilidade de localizar documentos;</li>
+              {/* <li>negativa de emissão do(s) documento(s) pelos cartórios, ou qualquer outro órgão público;</li> */}
             </ul>
             <p>— todos de responsabilidade <strong>exclusiva</strong> dos cartórios e órgãos públicos.</p>
-            <p>
-              Em caso de <strong>retificação de certidão</strong>, o usuário deve tratar diretamente com o órgão emissor. Nosso departamento jurídico pode auxiliar mediante solicitação.
-            </p>
-            <p>Contato Jurídico: WhatsApp <strong>(19) 99915-8230</strong></p>
 
             <h2 className={styles.sectionTitle}>8. Propriedade Intelectual</h2>
             <p>
@@ -157,11 +151,6 @@ export default function TermsAndConditionsPage() {
               <li>Email: <strong>contato@documentoaqui.com.br</strong></li>
               <li>WhatsApp: <strong>(19) 99653-7342</strong></li>
               <li>Horário: Segunda a Sexta, das 9h às 18h</li>
-            </ul>
-            <p><strong>Suporte Jurídico:</strong></p>
-            <ul>
-              <li>WhatsApp: <strong>(19) 99915-8230</strong></li>
-              <li>Horário: Segunda a Sexta das 9h às 17h / Sábado das 9h às 12h</li>
             </ul>
 
             <h2 className={styles.sectionTitle}>10. Alterações dos Termos</h2>

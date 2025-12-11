@@ -18,7 +18,7 @@ export default function AssessoriaJuridicaPage() {
 
           <div className={styles.content}>
             <p>
-              A Documento Aqui é uma plataforma privada que facilita a solicitação e levantamento de certidões e documentos emitidos por cartórios, tribunais e órgãos públicos em todo o Brasil.
+              A Documento Aqui é uma plataforma privada que oferece uma forma prática e organizada para a solicitação e o levantamento de certidões e documentos emitidos por cartórios, tribunais e órgãos públicos em todo o Brasil.
             </p>
 
             <p><b>Passo a Passo:</b></p>
@@ -31,7 +31,7 @@ export default function AssessoriaJuridicaPage() {
                 <li>Certidões de registro civil (nascimento, casamento, óbito)</li>
                 <li>Matrícula de imóvel e visualização</li>
                 <li>Certidões estaduais, federais e municipais</li>
-                <li>Pesquisas por CPF/CNPJ</li>
+                <li>Consultas documentais permitidas por lei </li>
                 <li>Documentos de tabelionato</li>
               </ul>
 
@@ -88,7 +88,8 @@ export default function AssessoriaJuridicaPage() {
                 <li>Verifica requisitos do órgão</li>
                 <li>Pede complemento de informações ou documentos ao usuário (se necessário)</li>
                 <li>Protocola o pedido oficial</li>
-                <li>Acompanha eventuais exigências solucionando possíveis entraves</li>
+                <li>Acompanha eventuais solicitações adicionais informadas pelo órgão emissor e 
+                  orienta o usuário quando necessário</li>
               </ol>
 
               <p>Para documentos que exigem assinatura, procuração ou comprovantes, entramos em contato com o usuário.</p>
@@ -121,7 +122,7 @@ export default function AssessoriaJuridicaPage() {
 
               <ul>
                 <li>Dúvida sobre prazos</li>
-                <li>Exigências de órgão</li>
+                <li>Solicitações adicionais do órgão emissor</li>
                 <li>Necessidade de retificação</li>
                 <li>Pedido de documentos especiais</li>
               </ul>

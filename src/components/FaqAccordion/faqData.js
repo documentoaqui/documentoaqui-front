@@ -9,7 +9,7 @@ export const faqData = {
         { "question": "Todas as certidões disponíveis no Brasil estão disponíveis aqui?", "answer": <p>Oferecemos a maioria das certidões mais procuradas. Em alguns casos específicos, informaremos a necessidade de análise adicional.</p> },
         { "question": "As certidões fornecidas têm validade jurídica?", "answer": <p>Sim. As certidões são emitidas diretamente pelos cartórios oficiais e possuem a mesma validade de um documento solicitado presencialmente.</p> },
         { "question": "Posso solicitar uma segunda via de certidão antiga?", "answer": <p>Sim. Basta informar os dados completos da pessoa ou do registro e, se possível, o cartório onde foi feito o primeiro registro.</p> },
-        { "question": "Certidões negativas são aceitas em todos os estados?", "answer": <p>Sim. As certidões negativas possuem validade nacional, mas recomendamos verificar se o órgão onde você irá apresentar exige alguma forma específica.</p> }
+        // { "question": "Certidões negativas são aceitas em todos os estados?", "answer": <p>Sim. As certidões negativas possuem validade nacional, mas recomendamos verificar se o órgão onde você irá apresentar exige alguma forma específica.</p> }
       ]
     },
     {
@@ -19,16 +19,16 @@ export const faqData = {
         { "question": "Quanto tempo leva para receber a certidão?", "answer": <p>O prazo varia de acordo com o tipo de certidão e o cartório responsável, mas a média é de 5 a 15 dias úteis.</p> },
         { "question": "Consigo acompanhar o status do meu pedido?", "answer": <p>Sim. Após o pagamento, você receberá um link para acessar sua área exclusiva, onde poderá acompanhar cada etapa do processo.</p> },
         { "question": "Meu documento não chegou. O que devo fazer?", "answer": <p>Verifique em seus pedidos na página “Minha Conta” se há atualizações. Caso tenha atrasos ou problemas com os Correios, você pode entrar em contato conosco por WhatsApp ou e-mail através da página de Contato.</p> },
-        { "question": "É possível retirar pessoalmente o documento no cartório?", "answer": <p>Não. Nosso serviço inclui o recebimento por e-mail ou envio pelos Correios para a sua comodidade.</p> }
+        // { "question": "É possível retirar pessoalmente o documento no cartório?", "answer": <p>Não. Nosso serviço inclui o recebimento por e-mail ou envio pelos Correios para a sua comodidade.</p> }
       ]
     },
     {
       "topic": "Sobre Pagamento e Reembolso",
       "subtopics": [
-        { "question": "Quais são as formas de pagamento disponíveis?", "answer": <p>Você pode pagar via cartão de crédito (em até 3x sem juros), cartão de débito, Pix ou boleto bancário.</p> },
-        { "question": "O valor pago inclui as taxas do cartório?", "answer": <p>Sim. O valor final inclui as taxas oficiais do cartório e nossa taxa de intermediação.</p> },
-        { "question": "Como funciona o reembolso em caso de erro?", "answer": <p>Caso o erro tenha sido nosso ou o pedido ainda não tenha sido enviado ao cartório, faremos o reembolso integral ou parcial conforme o caso.</p> },
-        { "question": "E se o cartório não encontrar o documento?", "answer": <p>Você receberá uma certidão negativa (nada consta). Nesse caso, não é possível o reembolso, pois o serviço foi prestado conforme solicitado.</p> },
+        { "question": "Quais são as formas de pagamento disponíveis?", "answer": <p>Você pode pagar via cartão de crédito (em até 3x), Pix ou boleto bancário.</p> },
+        { "question": "O valor pago inclui as taxas do cartório e/ou Órgãos Emissores?", "answer": <p>Sim. O valor final inclui as taxas oficiais do cartório e nossa taxa de intermediação.</p> },
+        { "question": "Como funciona o reembolso em caso de erro?", "answer": <p>Caso o erro tenha sido nosso, faremos o reembolso integral.</p> },
+        { "question": "E se o cartório não encontrar o documento?", "answer": <p>Você receberá uma certidão negativa (nada consta).  Nesse caso, não há reembolso, pois a solicitação foi processada corretamente conforme as informações fornecidas.</p> },
         { "question": "Em quanto tempo o reembolso é processado?", "answer": <p>Após análise, o prazo para reembolso é de até 30 dias úteis.</p> }
       ]
     },
@@ -36,7 +36,7 @@ export const faqData = {
       "topic": "Sobre Dados e Formulários",
       "subtopics": [
         { "question": "É seguro fornecer meus dados pessoais aqui?", "answer": <p>Sim. Nossos sistemas seguem as diretrizes da LGPD e utilizamos criptografia para proteger todas as informações. Para mais informações acesse nossa página de Política de Privacidade.</p> },
-        { "question": "E se eu preencher algum dado errado?", "answer": <p>Fale conosco o mais rápido possível através do WhatsApp ou da nossa página de Contato para avaliarmos a possibilidade de correção antes do envio ao cartório.</p> },
+        { "question": "E se eu preencher algum dado errado?", "answer": <p>Fale conosco o mais rápido possível através do WhatsApp ou da nossa página de Contato para avaliarmos a possibilidade de correção.</p> },
         { "question": "Quais documentos são obrigatórios para solicitar uma certidão?", "answer": <p>Depende do tipo de certidão. Em geral, solicitamos nome completo, data de nascimento, filiação e cidade/estado de registro. Você pode saber mais detalhes sobre a certidão que precisa dentro da nossa página de Certidões.</p> },
         { "question": "Posso solicitar a certidão de outra pessoa?", "answer": <p>Sim, desde que você tenha as informações necessárias e, em alguns casos, autorização ou parentesco direto.</p> },
         { "question": "Como saberei se meu pedido foi aceito pelo cartório?", "answer": <p>Você será notificado por e-mail e poderá acompanhar essa confirmação em pedidos ao acessar a página “Minha Conta”.</p> }
@@ -63,8 +63,8 @@ export const faqData = {
       "topic": "Dúvidas Gerais",
       "subtopics": [
         { "question": "Posso solicitar mais de uma certidão no mesmo pedido?", "answer": <p>Sim. Você pode incluir múltiplas certidões no carrinho antes de finalizar a compra.</p> },
-        { "question": "E se o cartório solicitar mais informações?", "answer": <p>Entraremos em contato com você imediatamente para fornecer os dados adicionais e seguir com a emissão.</p> },
-        { "question": "O que acontece se eu não responder à solicitação de dados?", "answer": <p>O pedido poderá ser pausado ou cancelado após determinado prazo, sendo mantida a taxa administrativa.</p> }
+        { "question": "E se o órgão responsável pela emissão do documento solicitar informações adicionais?", "answer": <p>Entraremos em contato com você imediatamente para fornecer os dados adicionais e seguir com a emissão.</p> },
+        { "question": "O que acontece se eu não responder à solicitação de dados?", "answer": <p>Nós da Documento Aqui tentaremos acessar o usuário/requerente por todos os canais de contato por ele fornecidos no momento do pedido e no seu cadastro. Porém, não havendo êxito neste contato, o pedido poderá ser pausado ou cancelado após determinado prazo, mantendo-se a taxa administrativa referente aos custos iniciais de análise e processamento.</p> }
       ]
     }
   ]

@@ -35,11 +35,13 @@ export default function ContatoPage() {
       <li>Ajuda para preencher um pedido já iniciado</li>
       <li>Orientações sobre acompanhamento e entrega</li>
       <li>Esclarecimentos gerais sobre o funcionamento do serviço de intermediação</li>
-      <li>Suporte em caso de divergências, erros, exigências ou atualizações do órgão emissor</li>
+      <li>Suporte em caso de divergências, solicitações adicionais ou atualizações 
+        informadas pelo órgão emissor</li>
     </ul><br></br>
 
     <p><b>Nosso compromisso com você</b></p>
-    <p>A equipe da Documento Aqui é especializada na intermediação de pedidos de certidões e documentos oficiais. Analisamos cada solicitação individualmente para garantir que os dados sejam enviados corretamente aos órgãos emissores, oferecendo atendimento humanizado, transparente e eficiente.</p>
+    <p>A equipe da Documento Aqui é especializada na intermediação de pedidos de certidões e documentos oficiais. Analisamos cada solicitação individualmente para assegurar que os dados sejam 
+      enviados de forma correta e completa aos órgãos emissores, oferecendo atendimento humanizado, transparente e eficiente.</p>
     </div>
   );
 

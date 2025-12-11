@@ -22,7 +22,7 @@ export default function RefundPolicyPage() {
             <h2 className={styles.sectionTitle}>1. Direito ao Reembolso</h2>
             <p>Você poderá solicitar <strong>reembolso integral</strong> quando:</p>
             <ul>
-              <li>a) O pedido <strong>não tiver sido encaminhado</strong> ao órgão emissor;</li>
+              <li>a) O pedido <strong>não tiver sido enviado</strong> ao órgão responsável pela emissão;</li>
               <li>b) Houver <strong>cobrança em duplicidade</strong>;</li>
               <li>c) O prazo de entrega ultrapassar <strong>30 dias úteis além do previsto</strong> sem justificativa do órgão emissor.</li>
             </ul>
@@ -31,22 +31,24 @@ export default function RefundPolicyPage() {
             <p><strong>Não haverá reembolso quando:</strong></p>
             <ul>
               <li>a) O pedido <strong>já tiver sido enviado</strong> ao órgão emissor;</li>
-              <li>b) Os dados informados pelo usuário estiverem <strong>incorretos</strong>;</li>
+              <li>b) Os dados informados pelo usuário estiverem <strong>estiverem incompletos, 
+                divergentes ou incompatíveis com o registro pesquisado</strong>;</li>
               <li>c) For emitida certidão negativa (<strong>“nada consta”</strong>);</li>
               <li>d) O órgão <strong>negar a emissão</strong> por motivos formais;</li>
-              <li>e) Houver necessidade de <strong>retificação</strong>, apresentação de documentos extras ou exigências do órgão;</li>
-              <li>f) O documento retornar por <strong>endereço incorreto</strong> ou ausência do destinatário.</li>
+              <li>e) Houver necessidade de <strong>retificação</strong>, apresentação de documentos extras ou solicitações adicionais feitas pelo órgão emissor;</li>
+              <li>f) O documento retornar por <strong>endereço incorreto</strong> ou ausência do destinatário no momento da entrega.</li>
             </ul>
 
             <h2 className={styles.sectionTitle}>3. Reembolso Parcial</h2>
             <p>
-              Quando houver custos cartoriais já pagos ou despesas operacionais, poderá ocorrer <strong>reembolso parcial</strong>, com retenção desses valores e de uma <strong>taxa administrativa de R$ 43,00</strong> referente aos custos operacionais e de suporte já incorridos no processamento inicial do pedido.
+              Quando houver custos cartoriais já pagos ou despesas operacionais, poderá ocorrer <strong>reembolso parcial</strong>, com retenção desses valores e de uma <strong>taxa administrativa de R$ 43,00</strong> referente aos custos administrativos 
+              iniciais relacionados ao processamento do pedido já incorridos no processamento inicial do pedido.
             </p>
             <p>
               O usuário sempre será informado de qualquer custo adicional antes da cobrança.
             </p>
 
-            <h2 className={styles.sectionTitle}>4. Como Solicitar</h2>
+            <h2 className={styles.sectionTitle}>4. Como solicitar o reembolso</h2>
             <p>Envie e-mail para:</p>
             <p>
                 <strong>contato@documentoaqui.com.br</strong>

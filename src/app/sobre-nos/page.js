@@ -87,11 +87,9 @@ export default function SobreNosPage() {
               <>
                 {/* Conteúdo desktop */}
                 <p>
-                  Solicitar documentos públicos nem sempre é simples. Filas,
-                  deslocamentos, exigências inesperadas e informações
-                  incompletas tornam o processo lento e desgastante,
-                  especialmente para quem tem pouco tempo, vive em outra cidade
-                  ou precisa resolver tudo à distância.
+                  Solicitar documentos públicos pode ser um processo moroso, especialmente quando 
+                  há informações incompletas, etapas que exigem atenção, ou ainda necessidade de 
+                  deslocamentos. 
                 </p>
 
                 <p>
@@ -101,17 +99,17 @@ export default function SobreNosPage() {
                   documentos oficiais.
                 </p>
 
-                <p>Assumimos por você as etapas burocráticas:</p>
-
+                <p>Assumimos por você as etapas necessárias:</p>
                 <ul>
                   <li>conferimos os dados</li>
                   <li>orientamos sobre requisitos</li>
                   <li>
                     enviamos corretamente a solicitação ao órgão competente e
-                    acompanhamos todo o andamento para evitar retrabalhos e
-                    exigências adicionais
+                    acompanhamos todo o andamento e orientamos quando o órgão emissor 
+                    solicita complementação de informações
                   </li>
-                  <li>solucionamos entraves burocráticos</li>
+                  <li>auxiliamos na resolução de pendências 
+                    informadas pelo órgão emissor</li>
                   <li>
                     lhe entregamos o documento após a emissão pelo órgão
                     competente
@@ -119,10 +117,10 @@ export default function SobreNosPage() {
                 </ul>
 
                 <p>
-                  Nosso serviço foi desenvolvido para oferecer agilidade,
-                  comodidade e segurança. Você faz o pedido online em poucos
-                  minutos, e nós cuidamos de todo o processo até que o documento
-                  seja emitido, seja em formato digital ou físico.
+                  Nosso serviço foi desenvolvido para oferecer praticidade e segurança. Você faz o pedido online em poucos
+                  minutos, e nós acompanhamos 
+                  todas as etapas desde o envio até a entrega do documento emitido pelo órgão 
+                  competente, seja em formato digital ou físico.
                 </p>
 
                 <p>
@@ -141,10 +139,10 @@ export default function SobreNosPage() {
 
                 <p>
                   Não somos cartório, tabelionato, junta comercial ou órgão
-                  governamental. Nosso papel é exclusivamente intermediar e
-                  facilitar o acesso do usuário aos documentos emitidos pelos
-                  órgãos oficiais, reduzindo erros, deslocamentos, perda de
-                  tempo e dificuldades técnicas enfrentadas por quem tenta
+                  governamental. Nosso papel é intermediar e organizar o acesso do 
+                  usuário aos documentos emitidos pelos
+                  órgãos oficiais, minimizando dificuldades operacionais comuns, como deslocamentos e dificuldades 
+                  técnicas enfrentadas por quem tenta
                   realizar o processo sozinho.
                 </p>
 
@@ -165,8 +163,7 @@ export default function SobreNosPage() {
 
                 <p>
                   Nosso compromisso é garantir que você receba o documento com
-                  tranquilidade, evitando burocracias e tornando o processo muito
-                  mais simples.
+                  tranquilidade, reduzindo dificuldades operacionais e tornando o processo muito mais simples..
                 </p>
               </>
             )}

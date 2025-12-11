@@ -16,10 +16,10 @@ const Footer = () => {
             <strong>NÃO SOMOS</strong> um cartório, tabelionato, junta comercial, prefeitura ou qualquer órgão público.
           </p>
           <p style={{ marginBottom: '0.5rem' }}>
-            Atuamos para facilitar o acesso do usuário a esses serviços, com suporte especializado.
+            Atuamos para organizar e intermediar o envio das solicitações aos órgãos responsáveis.
           </p>
           <p style={{ margin: 0, marginBottom: '0.5rem' }}>
-            Os documentos emitidos, prazos e informações são de responsabilidade exclusiva do órgão emissor.
+            Os documentos emitidos são de responsabilidade exclusiva do órgão emissor.
           </p>
           <p style={{ margin: 0, fontWeight: 'bold' }}>
            As certidões, documentos e pesquisas também podem ser solicitadas diretamente pelo usuário aos órgãos públicos competentes, sem a intermediação da Documentos aqui. Leia as políticas do site.
@@ -39,7 +39,7 @@ const Footer = () => {
           <p className={styles.copyrightText}>
             Documento Aqui © {new Date().getFullYear()}. Todos os Direitos Reservados.
           </p>
-          <p className={styles.developerCredit}>
+          {/* <p className={styles.developerCredit}>
             Desenvolvido por{' '}
             <a 
               href="https://codebypatrick.dev/" 
@@ -49,7 +49,7 @@ const Footer = () => {
             >
               Patrick.Developer
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

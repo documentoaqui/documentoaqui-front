@@ -67,7 +67,8 @@ export default function PrivacyPolicyPage() {
             <h2 className={styles.sectionTitle}>4. Compartilhamento de Dados</h2>
             <p>Seus dados serão compartilhados somente com:</p>
             <ul>
-                <li>cartórios, tabelionatos e órgãos públicos relacionados ao pedido;</li>
+                <li>cartórios, tabelionatos e órgãos públicos responsáveis pela emissão do 
+                  documento solicitado;</li>
                 <li>empresas de processamento de pagamentos;</li>
                 <li>empresas de entrega (Correios/transportadoras);</li>
                 <li>autoridades públicas, quando exigido por lei.</li>
