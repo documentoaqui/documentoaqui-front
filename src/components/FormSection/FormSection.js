@@ -9,14 +9,44 @@ import styles from './FormSection.module.css';
 const FormSection = ({ imageSrc, imageAlt, title, description }) => {
   const [agreed, setAgreed] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!agreed) {
-      alert('Você precisa concordar com a Política de Privacidade.');
-      return;
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (!agreed) {
+  //     alert('Você precisa concordar com a Política de Privacidade.');
+  //     return;
+  //   }
+  //   alert('Formulário enviado com sucesso!');
+  // };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!agreed) {
+    alert("Você precisa concordar com a Política de Privacidade.");
+    return;
+  }
+
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch("/api/contato", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      alert("Mensagem enviada com sucesso!");
+      e.target.reset();
+      setAgreed(false);
+    } else {
+      alert("Erro ao enviar mensagem.");
     }
-    alert('Formulário enviado com sucesso!');
-  };
+  } catch (err) {
+    console.error(err);
+    alert("Erro ao enviar mensagem.");
+  }
+};
 
   return (
     <section className={styles.contactWrapper}>
