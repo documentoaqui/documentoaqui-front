@@ -29,7 +29,7 @@ const handleSubmit = async (e) => {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const response = await fetch("/api/contato", {
+    const response = await fetch("http://72.61.42.248:3000/api/contato", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
