@@ -29,7 +29,7 @@ const handleSubmit = async (e) => {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const response = await fetch("https://www.documentoaqui.com.br/api/contato", {
+    const response = await fetch("https://api.documentoaqui.com.br/api/contato", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
