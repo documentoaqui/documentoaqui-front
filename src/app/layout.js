@@ -1,4 +1,5 @@
 import { Montserrat } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { AuthProvider } from "@/context/AuthContext";
@@ -17,7 +18,9 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR">
       <head>
         {/* Google Tag Manager */}
-        <script
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){
@@ -43,7 +46,7 @@ export default function RootLayout({ children }) {
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
+          />
         </noscript>
         {/* End GTM */}
 
