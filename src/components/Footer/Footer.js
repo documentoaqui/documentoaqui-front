@@ -21,8 +21,8 @@ const Footer = () => {
           <p style={{ margin: 0, marginBottom: '0.5rem' }}>
             Os documentos emitidos são de responsabilidade exclusiva do órgão emissor.
           </p>
-          <p style={{ margin: 0, fontWeight: 'bold' }}>
-           As certidões, documentos e pesquisas também podem ser solicitadas diretamente pelo usuário aos órgãos públicos competentes, sem a intermediação da Documentos aqui. Leia as políticas do site.
+          <p style={{ margin: 0}}>
+           As certidões, documentos e pesquisas também podem ser solicitadas diretamente pelo usuário aos órgãos públicos competentes, sem a intermediação da Documentos Aqui. Leia as políticas do site.
           </p>
         </div>
 

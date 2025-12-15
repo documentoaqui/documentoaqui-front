@@ -135,10 +135,7 @@ export default function TermsAndConditionsPage() {
             <ul>
               <li>erros e inconsistências provenientes de informações prestadas pelo requerente do documento, bem como de órgãos emissores;</li>
               <li>atrasos, negativa de emissão e impossibilidade de localização dos documentos pelos órgãos públicos emissores;</li>
-              <li>inconsistências;</li>
-              {/* <li>negativa de emissão do(s) documento(s) pelos cartórios, ou qualquer outro órgão público;</li> */}
             </ul>
-            <p>— todos de responsabilidade <strong>exclusiva</strong> dos cartórios e órgãos públicos.</p>
 
             <h2 className={styles.sectionTitle}>8. Propriedade Intelectual</h2>
             <p>
