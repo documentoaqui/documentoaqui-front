@@ -18,12 +18,12 @@ const PRICE_MUNICIPAL = 77.30;
 
 export const categories = [
   'Todos',
-  'Cartório de Registro de Imóveis',
-  'Cartório de Registro Civil',
-  'Tabelionato de Notas (Escrituras)',
-  'Cartório de Protesto',
-  'Certidões Federais e Estaduais',
-  'Certidões Municipais',
+  'Imóveis',
+  'Registro Civil',
+  'Notas',
+  'Protesto',
+  'Federais e Estaduais',
+  'Municipais',
   // 'Suporte Juridico',
   'Pesquisa'
 ];
