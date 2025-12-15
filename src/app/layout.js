@@ -40,14 +40,14 @@ export default function RootLayout({ children }) {
 
       <body className={montserrat.className}>
         {/* Google Tag Manager (noscript) */}
-        <noscript>
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-KDZZB5KZ"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           />
-        </noscript>
+        </noscript> */}
         {/* End GTM */}
 
         <AuthProvider>
