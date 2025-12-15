@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR">
       <head>
         {/* Google Tag Manager */}
-        <Script
+        {/* <Script
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
               })(window,document,'script','dataLayer','GTM-KDZZB5KZ');
             `,
           }}
-        />
+        /> */}
         {/* End Google Tag Manager */}
       </head>
 
