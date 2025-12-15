@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <head>
-        <Script
+        {/* <Script
           id="google-tag-manager"
           strategy="afterInteractive"
         >
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-KDZZB5KZ');
           `}
-        </Script>
+        </Script> */}
       </head>
 
       <body className={montserrat.className}>
