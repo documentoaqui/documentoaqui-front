@@ -8,12 +8,11 @@ const Hero = () => {
         <div className={styles.content}>
           <div className={styles.titleWrapper}>
             <h1 className={styles.title}>
-              Solicitar certidões não precisa ser burocrático.
+              Solicitar certidões pode ser muito mais simples!
             </h1>
           </div>
           <p className={styles.subtitle}>
-          Você faz tudo online, com rapidez e segurança.
-          Nós cuidamos do processo junto aos órgãos emissores para evitar filas, exigências e retrabalhos.
+          A Documento Aqui oferece uma forma prática e organizada de solicitar documentos públicos junto aos órgãos emissores. De forma simples e segura.
           </p>
           <button className={styles.ctaButton}>
             SOLICITE AGORA
