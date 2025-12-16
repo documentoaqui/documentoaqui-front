@@ -32,9 +32,10 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
     try {
       // Usa a variável de ambiente. Se não existir, usa a URL direta da API.
       // IMPORTANTE: Aqui deve ser o domínio da API (VPS), não o do site.
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.documentoaqui.com.br/api/contato";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.documentoaqui.com.br";
       
-      const response = await fetch(`${apiUrl}/api/contato`, {
+      // const response = await fetch(`${apiUrl}/api/contato`, {
+      const response = await fetch(`https://api.documentoaqui.com.br/api/contato`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
