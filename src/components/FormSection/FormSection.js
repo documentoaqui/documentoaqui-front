@@ -35,7 +35,7 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.documentoaqui.com.br";
       
       // const response = await fetch(`${apiUrl}/api/contato`, {
-      const response = await fetch(`https://api.documentoaqui.com.br/api/contato`, {
+      const response = await fetch(`http://localhost:3000/api/contato`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
