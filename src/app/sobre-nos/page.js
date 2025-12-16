@@ -19,9 +19,10 @@ export default function SobreNosPage() {
 
           <div className={styles.content}>
             <p>
-              Solicitar documentos públicos pode ser um processo moroso,
-              especialmente quando há informações incompletas, exigências
-              inesperadas ou necessidade de deslocamentos.
+              Solicitar documentos públicos nem sempre é simples. Filas, deslocamentos, 
+              exigências inesperadas e informações incompletas tornam o processo lento e 
+              desgastante, especialmente para quem tem pouco tempo, vive em outra cidade ou 
+              precisa resolver tudo à distância. 
             </p>
 
             <p>
@@ -31,44 +32,57 @@ export default function SobreNosPage() {
               oficiais.
             </p>
 
-            <p>Assumimos por você todas as etapas necessárias:</p>
+            <p>Assumimos por você as etapas burocráticas:</p>
 
             <ul>
               <li>conferimos os dados enviados</li>
               <li>orientamos sobre requisitos</li>
-              <li>enviamos corretamente a solicitação ao órgão competente</li>
+              <li>enviamos corretamente a solicitação ao órgão competente e acompanhamos 
+              todo o andamento para evitar retrabalhos e exigências adicionais</li>
               <li>acompanhamos o andamento do pedido</li>
-              <li>auxiliamos na resolução de pendências</li>
-              <li>entregamos o documento após a emissão</li>
+              <li>solucionamos entraves burocráticos</li>
+              <li>lhe entregamos o documento após a emissão pelo órgão competente</li>
             </ul>
 
             <p>
-              Você solicita online em poucos minutos. Nós cuidamos do restante
-              até a entrega digital ou física.
+              Nosso serviço foi desenvolvido para oferecer agilidade, comodidade e segurança. Você faz o pedido online em poucos minutos, e nós 
+              cuidamos de todo o processo até que o documento seja emitido, seja em formato digital ou físico.
             </p>
 
             <p>
               A plataforma é administrada pela{" "}
               <strong>PALAZZI SOCIEDADE INDIVIDUAL DE ADVOCACIA</strong>{" "}
-              (OAB/SP nº 58.133), garantindo rigor jurídico, precisão e
-              conformidade com a legislação.
+              (OAB/SP nº 58.133), garantindo rigor jurídico, conformidade com a 
+              legislação aplicável e precisão no tratamento de cada solicitação. 
             </p>
 
             <p>
-              Não somos cartório, tabelionato ou órgão governamental. Nossa
-              função é facilitar o acesso aos documentos oficiais, reduzindo
-              erros, deslocamentos e perda de tempo.
+              Contamos com equipe multidisciplinar especializada em interpretar pedidos, validar 
+              informações e assegurar que seu pedido siga corretamente para o órgão emissor.
             </p>
 
             <p>
-              Seguimos estritamente a Lei Geral de Proteção de Dados (LGPD).
-              Todas as informações são tratadas com segurança e
-              confidencialidade.
+              Não somos cartório, tabelionato, junta comercial ou órgão governamental. Nosso 
+              papel é exclusivamente intermediar e facilitar o acesso do usuário aos documentos emitidos pelos órgãos 
+              oficiais, reduzindo erros, deslocamentos, perda de tempo e dificuldades técnicas enfrentadas por quem tenta realizar o processo sozinho.
             </p>
 
             <p>
-              Nosso compromisso é garantir que você receba seu documento com
-              tranquilidade, sem burocracias.
+              Seguimos estritamente os princípios da Lei Geral de Proteção de Dados (LGPD - Lei nº 
+              13.709/2018). Todas as informações enviadas são tratadas com segurança, 
+              confidencialidade e apenas para a finalidade específica da emissão do documento 
+              solicitado. 
+            </p>
+
+            <p>
+              Seja para solicitar certidões de nascimento, casamento, óbito, segunda via de 
+              documentos ou diversos outros documentos públicos, você conta com um serviço 
+              confiável, transparente e eficiente.
+            </p>
+
+            <p>
+              Nosso compromisso é garantir que você receba o documento com tranquilidade, 
+              evitando burocracias e tornando o processo muito mais simples.
             </p>
           </div>
         </div>
