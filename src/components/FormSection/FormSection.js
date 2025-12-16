@@ -34,8 +34,7 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
       // IMPORTANTE: Aqui deve ser o domínio da API (VPS), não o do site.
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.documentoaqui.com.br";
       
-      // const response = await fetch(`${apiUrl}/api/contato`, {
-      const response = await fetch(`http://localhost:3000/api/contato`, {
+      const response = await fetch(`${apiUrl}/api/contato`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
