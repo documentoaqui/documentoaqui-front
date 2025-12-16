@@ -8,12 +8,11 @@ import styles from './FormSection.module.css';
 
 const FormSection = ({ imageSrc, imageAlt, title, description }) => {
   const [agreed, setAgreed] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); // Novo estado para controlar o botão
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 1. Validação de Privacidade
     if (!agreed) {
       alert("Você precisa concordar com a Política de Privacidade.");
       return;
@@ -22,7 +21,7 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    // 2. Validação de E-mail duplicado
+    // Validação extra: Confirmar se os e-mails batem
     if (data.email !== data.confirmEmail) {
       alert("Os e-mails informados não conferem.");
       return;
@@ -31,18 +30,13 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
     setLoading(true); // Bloqueia o botão
 
     try {
-      // ============================================================
-      // 🚀 CONFIGURAÇÃO DO FORMSPREE
-      // Substitua o final da URL pelo seu código do Formspree
-      // ============================================================
-      const formspreeUrl = "https://formspree.io/f/xrbnwovv"; 
+      // Usa a variável de ambiente. Se não existir, usa a URL direta da API.
+      // IMPORTANTE: Aqui deve ser o domínio da API (VPS), não o do site.
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.documentoaqui.com.br";
       
-      const response = await fetch(formspreeUrl, {
+      const response = await fetch(`${apiUrl}/api/contato`, {
         method: "POST",
-        headers: { 
-            "Content-Type": "application/json",
-            "Accept": "application/json" // Importante para não redirecionar a página
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
@@ -50,10 +44,10 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
 
       if (response.ok) {
         alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-        e.target.reset(); // Limpa o formulário
+        e.target.reset();
         setAgreed(false);
       } else {
-        console.error("Erro do Formspree:", result);
+        console.error("Erro do servidor:", result);
         alert("Ocorreu um erro ao enviar. Tente novamente mais tarde.");
       }
     } catch (err) {
@@ -153,13 +147,10 @@ const FormSection = ({ imageSrc, imageAlt, title, description }) => {
               </label>
             </div>
 
-            {/* Campos ocultos opcionais para o Formspree (Assunto do email) */}
-            <input type="hidden" name="_subject" value="Novo contato pelo Site" />
-
             <button 
               type="submit" 
               className={styles.submitButton} 
-              disabled={loading}
+              disabled={loading} // Desabilita botão se estiver carregando
               style={{ opacity: loading ? 0.7 : 1, cursor: loading ? 'wait' : 'pointer' }}
             >
               {loading ? 'Enviando...' : 'Enviar'}
