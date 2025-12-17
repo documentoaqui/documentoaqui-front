@@ -17,13 +17,12 @@ const PRICE_MUNICIPAL = 77.30;
 // Preços de Protesto, Registro Civil, Imóveis e Notas agora são por estado (null)
 
 export const categories = [
-  'Todos',
-  'Imóveis',
-  'Registro Civil',
-  'Notas',
-  'Protesto',
-  'Federais e Estaduais',
-  'Municipais',
+  'Cartório de Registro de Imóveis',
+  'Cartório de Registro Civil',
+  'Tabelionato de Notas (Escrituras)',
+  'Cartório de Protesto',
+  'Certidões Federais e Estaduais',
+  'Certidões Municipais',
   // 'Suporte Juridico',
   'Pesquisa'
 ];
