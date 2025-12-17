@@ -17,12 +17,12 @@ const PRICE_MUNICIPAL = 77.30;
 // Preços de Protesto, Registro Civil, Imóveis e Notas agora são por estado (null)
 
 export const categories = [
-  'Cartório de Registro de Imóveis',
-  'Cartório de Registro Civil',
-  'Tabelionato de Notas (Escrituras)',
-  'Cartório de Protesto',
-  'Certidões Federais e Estaduais',
-  'Certidões Municipais',
+  'Imóveis',
+  'Registro Civil',
+  'Notas',
+  'Protesto',
+  'Federais e Estaduais',
+  'Municipais',
   // 'Suporte Juridico',
   'Pesquisa'
 ];
@@ -258,37 +258,37 @@ export const allCertificates = [
     slug: toSlug('Certidão Teste'),
   },
   // --- Cartório de Registro de Imóveis ---
-  { id: 46, name: 'Certidão de Imóvel', slug: toSlug('Certidão de Imóvel'), price: null, atribuicaoId: 4, category: 'Cartório de Registro de Imóveis', icon: icons.BUILDING, imageSrc: productImagePaths[toSlug('Certidão de Imóvel')],
+  { id: 46, name: 'Certidão de Imóvel', slug: toSlug('Certidão de Imóvel'), price: null, atribuicaoId: 4, category: 'Imóveis', icon: icons.BUILDING, imageSrc: productImagePaths[toSlug('Certidão de Imóvel')],
     description: 'Solicite a certidão de matrícula do seu imóvel, essencial para transações de compra e venda.',
     longDescription: 'A Certidão de Imóvel é o documento oficial que comprova a situação jurídica de uma propriedade...',
     faq: '[{"q": "Para que serve esta certidão?", "a": "É essencial para processos de compra e venda, financiamentos, inventários, partilhas e para comprovar a propriedade e a inexistência de dívidas atreladas ao imóvel."},{"q": "Qual a validade da certidão de imóvel?", "a": "Geralmente, para atos oficiais como escrituras, a validade é de 30 dias. Para simples conferência, não há prazo de validade."}]',
     formFields: formTemplateCertidaoImovel, allowCpfSearch: true, allowManualCartorio: true 
   },
-  { id: 52, name: 'Visualização de Matrícula', slug: toSlug('Visualização de Matrícula'), price: null, atribuicaoId: 4, category: 'Cartório de Registro de Imóveis', icon: icons.BUILDING, imageSrc: productImagePaths[toSlug('Visualização de Matrícula')],
+  { id: 52, name: 'Visualização de Matrícula', slug: toSlug('Visualização de Matrícula'), price: null, atribuicaoId: 4, category: 'Imóveis', icon: icons.BUILDING, imageSrc: productImagePaths[toSlug('Visualização de Matrícula')],
     description: 'Visualize a matrícula de um imóvel antes de requerer a sua certidão. Obs.: Não possui valor jurídico.',
     longDescription: 'A visualização de matrícula é uma cópia digital não certificada do documento oficial do imóvel...',
     faq: '[{"q": "Este documento tem valor legal?", "a": "Não, a visualização de matrícula é um documento meramente informativo e não possui validade jurídica para atos oficiais."},{"q": "Quando devo usar a visualização em vez da certidão?", "a": "Use a visualização para conferir dados rapidamente, como o nome do proprietário ou o número da matrícula, sem a necessidade de um documento oficial."}]',
     formFields: formTemplateVisualizacaoMatricula 
   },
-  { id: 56, name: 'Certidão de Matrícula com Ônus e Ações', slug: toSlug('Certidão de Matrícula com Ônus e Ações'), price: null, atribuicaoId: 4, category: 'Cartório de Registro de Imóveis', icon: icons.BUILDING, imageSrc: productImagePaths[toSlug('Certidão de Matrícula com Ônus e Ações')],
+  { id: 56, name: 'Certidão de Matrícula com Ônus e Ações', slug: toSlug('Certidão de Matrícula com Ônus e Ações'), price: null, atribuicaoId: 4, category: 'Imóveis', icon: icons.BUILDING, imageSrc: productImagePaths[toSlug('Certidão de Matrícula com Ônus e Ações')],
     description: 'Certidão completa que informa a situação do imóvel, incluindo dívidas, hipotecas e processos judiciais.',
     longDescription: 'A Certidão de Matrícula com Negativa de Ônus e Ações Reipersecutórias é o documento mais completo para verificar a segurança jurídica de um imóvel...',
     faq: '[{"q": "O que são ônus e ações reipersecutórias?", "a": "Ônus são dívidas ou obrigações que recaem sobre o imóvel (ex: hipoteca). Ações reipersecutórias são processos judiciais que podem resultar na perda da propriedade pelo atual dono."},{"q": "Por que esta certidão é mais segura?", "a": "Porque ela garante que o imóvel está livre de pendências financeiras e judiciais, protegendo o comprador de futuras complicações."}]',
     formFields: formTemplateCertidaoImovel, allowCpfSearch: true, allowManualCartorio: true 
   },
-  { id: 54, name: 'Certidão de Penhor e Safra', slug: toSlug('Certidão de Penhor e Safra'), price: null, atribuicaoId: 4, category: 'Cartório de Registro de Imóveis', icon: icons.BUILDING, imageSrc: productImagePaths[toSlug('Certidão de Penhor e Safra')],
+  { id: 54, name: 'Certidão de Penhor e Safra', slug: toSlug('Certidão de Penhor e Safra'), price: null, atribuicaoId: 4, category: 'Imóveis', icon: icons.BUILDING, imageSrc: productImagePaths[toSlug('Certidão de Penhor e Safra')],
     description: 'Documento essencial para o agronegócio, utilizado para registrar garantias em financiamentos agrícolas.',
     longDescription: 'A Certidão de Penhor e Safra comprova o registro de garantias sobre colheitas futuras ou equipamentos agrícolas...',
     faq: '[{"q": "Quem precisa desta certidão?", "a": "Produtores rurais, cooperativas, tradings e instituições financeiras que atuam com crédito agrícola."},{"q": "O que pode ser dado em penhor?", "a": "Colheitas futuras, máquinas, veículos agrícolas e outros bens móveis relacionados à atividade rural."}]',
     formFields: formTemplateCertidaoImovel, allowCpfSearch: true, allowManualCartorio: true 
   },
-  { id: 64, name: 'Pesquisa Prévia de Imóveis por CPF/CNPJ', slug: toSlug('Pesquisa Previa de imoveis por CPF CNPJ'), price: null, category: 'Cartório de Registro de Imóveis', icon: icons.SEARCH, 
+  { id: 64, name: 'Pesquisa Prévia de Imóveis por CPF/CNPJ', slug: toSlug('Pesquisa Previa de imoveis por CPF CNPJ'), price: null, category: 'Imóveis', icon: icons.SEARCH, 
     // *** LINHA MODIFICADA ***
     imageSrc: productImagePaths[toSlug('Pesquisa Previa de imoveis por CPF CNPJ')], 
     description: 'Busca por imóveis registrados em um CPF ou CNPJ em todos os cartórios de um estado.', 
     pesquisaType: 'previa'
   },
-  { id: 65, name: 'Pesquisa Qualificada de Imóveis por CPF/CNPJ', slug: toSlug('Pesquisa Qualificada de imoveis por CPF CNPJ'), price: null, category: 'Cartório de Registro de Imóveis', icon: icons.SEARCH, 
+  { id: 65, name: 'Pesquisa Qualificada de Imóveis por CPF/CNPJ', slug: toSlug('Pesquisa Qualificada de imoveis por CPF CNPJ'), price: null, category: 'Imóveis', icon: icons.SEARCH, 
     // *** LINHA MODIFICADA ***
     imageSrc: productImagePaths[toSlug('Pesquisa Qualificada de imoveis por CPF CNPJ')],
     description: 'Investigação jurídica pelo CPF ou CNPJ em cartórios específicos de uma cidade.', 
@@ -296,25 +296,25 @@ export const allCertificates = [
   },
 
   // --- Cartório de Registro Civil ---
-  { id: 49, name: 'Certidão de Nascimento', slug: toSlug('Certidão de Nascimento'), price: null, atribuicaoId: 3, category: 'Cartório de Registro Civil', icon: icons.DOCUMENT, imageSrc: productImagePaths[toSlug('Certidão de Nascimento')],
+  { id: 49, name: 'Certidão de Nascimento', slug: toSlug('Certidão de Nascimento'), price: null, atribuicaoId: 3, category: 'Registro Civil', icon: icons.DOCUMENT, imageSrc: productImagePaths[toSlug('Certidão de Nascimento')],
     description: 'Solicite a 2ª via atualizada da Certidão de Nascimento, o primeiro e mais importante documento civil de um cidadão.',
     longDescription: 'A Certidão de Nascimento é o documento que comprova oficialmente o nascimento de uma pessoa...',
     faq: '[{"q": "Por que preciso de uma 2ª via atualizada?", "a": "Muitos órgãos públicos e processos legais, como casamento, solicitação de cidadania ou inventário, exigem uma certidão emitida nos últimos 6 meses para garantir que não houve alterações (averbações) no registro."},{"q": "O que é uma certidão em inteiro teor?", "a": "É uma cópia fiel de tudo que está escrito no livro de registro, incluindo todas as averbações. A certidão em breve relato (comum) resume as informações principais."}]',
     formFields: formTemplateNascimento 
   },
-  { id: 48, name: 'Certidão de Casamento', slug: toSlug('Certidão de Casamento'), price: null, atribuicaoId: 3, category: 'Cartório de Registro Civil', icon: icons.DOCUMENT, imageSrc: productImagePaths[toSlug('Certidão de Casamento')],
+  { id: 48, name: 'Certidão de Casamento', slug: toSlug('Certidão de Casamento'), price: null, atribuicaoId: 3, category: 'Registro Civil', icon: icons.DOCUMENT, imageSrc: productImagePaths[toSlug('Certidão de Casamento')],
     description: 'Obtenha a 2ª via da sua Certidão de Casamento, com todas as averbações (divórcio, óbito, etc.).',
     longDescription: 'Este documento oficializa a união entre duas pessoas, estabelecendo a comunhão de vida e deveres...',
     faq: '[{"q": "Para que serve a 2ª via da Certidão de Casamento?", "a": "É necessária para processos de divórcio, compra e venda de imóveis, inclusão do cônjuge em planos de saúde, processos de cidadania e inventários."},{"q": "Minha certidão virá com a averbação de divórcio?", "a": "Sim, se o divórcio já foi devidamente registrado no cartório de registro civil, a averbação constará na 2ª via atualizada."}]',
     formFields: formTemplateCasamento 
   },
-  { id: 47, name: 'Certidão de Óbito', slug: toSlug('Certidão de Óbito'), price: null, atribuicaoId: 3, category: 'Cartório de Registro Civil', icon: icons.DOCUMENT, imageSrc: productImagePaths[toSlug('Certidão de Óbito')],
+  { id: 47, name: 'Certidão de Óbito', slug: toSlug('Certidão de Óbito'), price: null, atribuicaoId: 3, category: 'Registro Civil', icon: icons.DOCUMENT, imageSrc: productImagePaths[toSlug('Certidão de Óbito')],
     description: 'Documento oficial que atesta o falecimento de um cidadão, indispensável para processos de inventário.',
     longDescription: 'A Certidão de Óbito é o documento legal que comprova o falecimento de uma pessoa...',
     faq: '[{"q": "Quem pode solicitar a Certidão de Óbito?", "a": "Qualquer pessoa pode solicitar, desde que tenha em mãos os dados do falecido (nome completo, data do óbito, etc.)."},{"q": "Preciso desta certidão para dar entrada na pensão por morte?", "a": "Sim, a Certidão de Óbito é um dos principais documentos exigidos pelo INSS para a concessão de pensão por morte."}]',
     formFields: formTemplateObito 
   },
-  { id: 43, name: 'Certidão de Interdição', price: null, slug: toSlug('Certidão de Interdição'), atribuicaoId: 3, category: 'Cartório de Registro Civil', icon: icons.DOCUMENT, imageSrc: productImagePaths[toSlug('Certidão de Interdição')],
+  { id: 43, name: 'Certidão de Interdição', price: null, slug: toSlug('Certidão de Interdição'), atribuicaoId: 3, category: 'Registro Civil', icon: icons.DOCUMENT, imageSrc: productImagePaths[toSlug('Certidão de Interdição')],
     description: 'Comprova que uma pessoa foi declarada civilmente incapaz de exercer atos da vida civil.',
     longDescription: 'A Certidão de Interdição, Tutela e Curatela informa se uma pessoa foi legalmente declarada incapaz de administrar seus próprios bens...',
     faq: '[{"q": "Onde essa certidão é registrada?", "a": "Ela é registrada no 1º Ofício de Registro Civil da cidade onde tramitou o processo judicial de interdição."},{"q": "Por que solicitam esta certidão na compra de um imóvel?", "a": "Para garantir que o vendedor tem capacidade civil para assinar o contrato e a escritura, evitando que a venda seja anulada no futuro."}]',
@@ -329,7 +329,7 @@ export const allCertificates = [
       price: null,
       slug: toSlug(cert.name), 
       atribuicaoId: 1,
-      category: 'Tabelionato de Notas (Escrituras)', 
+      category: 'Notas', 
       icon: icons.DOCUMENT, 
       imageSrc: productImagePaths[toSlug(cert.name)], 
       description: `Solicite a cópia fiel (certidão) de uma ${cert.name.toLowerCase()} registrada em um Tabelionato de Notas.`,
@@ -337,7 +337,7 @@ export const allCertificates = [
       faq: `[{"q": "O que é uma escritura pública?", "a": "É um documento elaborado por um tabelião que formaliza juridicamente a vontade das partes, como uma compra e venda, doação ou testamento, dando segurança e fé pública ao ato."},{"q": "Perdi minha escritura, o que fazer?", "a": "Você pode solicitar uma 2ª via (certidão da escritura) a qualquer momento no Tabelionato de Notas onde ela foi originalmente lavrada. Esta certidão tem o mesmo valor do documento original."}]`,
       formFields: formTemplateEscritura
   })),
-  { id: 67, name: 'Pesquisa Escrituras e Procurações por CPF/CNPJ', slug: toSlug('Pesquisa Escrituras e Procurações por CPF CNPJ'), price: 68.30, category: 'Tabelionato de Notas (Escrituras)', icon: icons.SEARCH, imageSrc: productImagePaths[toSlug('Pesquisa Escrituras e Procurações por CPF CNPJ')],
+  { id: 67, name: 'Pesquisa Escrituras e Procurações por CPF/CNPJ', slug: toSlug('Pesquisa Escrituras e Procurações por CPF CNPJ'), price: 68.30, category: 'Notas', icon: icons.SEARCH, imageSrc: productImagePaths[toSlug('Pesquisa Escrituras e Procurações por CPF CNPJ')],
     description: 'Busca por registros de procurações e/ou escrituras públicas nos Tabelionatos de Notas.',
     longDescription: 'Este serviço realiza uma busca nos índices de Tabelionatos de Notas para localizar escrituras (como compra e venda, doação, inventário) ou procurações públicas...',
     faq: `[{"q": "Qual a diferença entre esta pesquisa e pedir a certidão de uma escritura?", "a": "A pesquisa serve para localizar se existem e onde estão registradas as escrituras. A certidão é a cópia de uma escritura que você já sabe onde foi feita."}]`,
@@ -345,7 +345,7 @@ export const allCertificates = [
   },
 
   // --- Cartório de Protesto ---
-  { id: 57, name: 'Certidão de Protesto', slug: toSlug('Certidão de Protesto'), price: null, atribuicaoId: 2, category: 'Cartório de Protesto', icon: icons.PROTEST, imageSrc: productImagePaths[toSlug('Certidão de Protesto')],
+  { id: 57, name: 'Certidão de Protesto', slug: toSlug('Certidão de Protesto'), price: null, atribuicaoId: 2, category: 'Protesto', icon: icons.PROTEST, imageSrc: productImagePaths[toSlug('Certidão de Protesto')],
     description: 'Verifique a existência de dívidas protestadas em cartório para um CPF ou CNPJ.',
     longDescription: 'A Certidão de Protesto informa se uma pessoa física ou jurídica possui títulos não pagos que foram levados a protesto...',
     faq: '[{"q": "O que significa ter um nome protestado?", "a": "Significa que uma dívida não paga foi registrada oficialmente em um Cartório de Protesto, tornando a inadimplência pública e podendo levar a restrições de crédito."},{"q": "Esta certidão abrange todo o Brasil?", "a": "Não, a pesquisa é realizada por cidade. Para uma pesquisa nacional, é necessário consultar os cartórios de cada localidade de interesse ou utilizar serviços de abrangência nacional."}]',
@@ -417,7 +417,7 @@ export const allCertificates = [
     ...cert, 
     price: PRICE_FEDERAL_ESTADUAL, 
     slug: toSlug(cert.name), 
-    category: 'Certidões Federais e Estaduais', 
+    category: 'Federais e Estaduais', 
     icon: icons.JUSTICE,
     imageSrc: productImagePaths[toSlug(cert.name)] || '/certidoes/default-federal.png',
     description: `Emita a ${cert.name} para comprovar a regularidade.`,
@@ -433,7 +433,7 @@ export const allCertificates = [
     ...cert,
     price: PRICE_MUNICIPAL,
     slug: toSlug(cert.name),
-    category: 'Certidões Municipais',
+    category: 'Municipais',
     icon: icons.JUSTICE,
     imageSrc: productImagePaths[toSlug('certidao-de-distribuicao-estadual-tj')] || '/certidoes/default-municipal.png',
     description: `Verifique a situação fiscal e cadastral perante o município.`,
