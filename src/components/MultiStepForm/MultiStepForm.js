@@ -130,7 +130,7 @@ export default function MultiStepForm({ productData }) {
                 ...middleFlow,
                 requerenteStep,
             ];
-        } else if (category === 'Pesquisa' || (category === 'Imóveis' && pesquisaType) || slug === toSlug('Pesquisa Escrituras e Procurações por CPF CNPJ')) {
+        } else if (category === 'Pesquisa' || (category === 'Cartório de Registro de Imóveis' && pesquisaType) || slug === toSlug('Pesquisa Escrituras e Procurações por CPF CNPJ')) {
             let primeiraEtapa = {};
             if (pesquisaType === 'previa' || pesquisaType === 'qualificada') {
                 primeiraEtapa = { id: 'dadosPesquisaAvancada', title: 'Dados da Pesquisa', Component: StepPesquisaAvancada };
@@ -176,7 +176,7 @@ export default function MultiStepForm({ productData }) {
             ];
         } else { // Fluxo Padrão (Registro de Imóveis, Registro Civil)
             const baseFlow = [];
-            if(category === 'Registro Civil') {
+            if(category === 'Cartório de Registro Civil') {
                  baseFlow.push({ id: 'cartorio', title: 'Localização', Component: StepCartorio });
                  baseFlow.push({ id: 'dadosCertidaoCivil', title: 'Dados da Certidão', Component: StepTipoCertidao });
             } else { // Cartório de Registro de Imóveis
@@ -237,7 +237,7 @@ export default function MultiStepForm({ productData }) {
             const priceByState = getPrice('registro_imoveis_pesquisas', 'estado', estado_pesquisa, 'pesquisa_qualificada');
             if (priceByState) basePrice = priceByState;
         }
-        else if (estado_cartorio && category === 'Registro Civil') {
+        else if (estado_cartorio && category === 'Cartório de Registro Civil') {
             const priceByState = getPrice('tabelionato_registro_civil', 'estado', estadoAbbr, 'valor');
             if (priceByState) {
                 basePrice = priceByState;
@@ -249,7 +249,7 @@ export default function MultiStepForm({ productData }) {
                 basePrice = priceByState;
             }
         } 
-        else if (estado_cartorio && category === 'Imóveis') {
+        else if (estado_cartorio && category === 'Cartório de Registro de Imóveis') {
             const isImovelPrincipal = slug === toSlug('Certidão de Imóvel') || slug === toSlug('Certidão de Matrícula com Ônus e Ações') || slug === toSlug('Certidão de Penhor e Safra');
             if (isImovelPrincipal) {
                 const priceByState = getPrice('registro_imoveis_pesquisas', 'estado', estadoAbbr, 'certidao_imovel');
