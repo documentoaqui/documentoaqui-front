@@ -153,7 +153,7 @@ export default function MultiStepForm({ productData }) {
             } else {
                 newFlow = [primeiraEtapa, requerenteStep, confirmacaoLgpdStep];
             }
-        } else if (category === 'Tabelionato de Notas (Escrituras)') {
+        } else if (category === 'Notas') {
             let middleFlow = [formatoStep, servicosAdicionaisStep];
              if (isPapel) {
                 middleFlow.push(enderecoStep);
@@ -243,7 +243,7 @@ export default function MultiStepForm({ productData }) {
                 basePrice = priceByState;
             }
         } 
-        else if (estado_cartorio && category === 'Tabelionato de Notas (Escrituras)') {
+        else if (estado_cartorio && category === 'Notas') {
             const priceByState = getPrice('tabelionato_registro_civil', 'estado', estadoAbbr, 'valor_notas');
             if (priceByState) {
                 basePrice = priceByState;
