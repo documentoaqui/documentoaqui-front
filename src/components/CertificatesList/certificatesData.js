@@ -248,15 +248,15 @@ const formTemplateConsultaJuridica = [
 
 // --- LISTA COMPLETA DE CERTIDÕES (SEM DUPLICATAS) ---
 export const allCertificates = [
-  // {
-  //   // teste de pagamento
-  //   id: 999,
-  //   name: 'Certidão Teste',
-  //   esfera: 'Teste',
-  //   imageSrc: '/img/certidao-teste.png',
-  //   price: 1,
-  //   slug: toSlug('Certidão Teste'),
-  // },
+  {
+    // teste de pagamento
+    id: 999,
+    name: 'Certidão Teste',
+    esfera: 'Teste',
+    imageSrc: '/img/certidao-teste.png',
+    price: 1,
+    slug: toSlug('Certidão Teste'),
+  },
   // --- Cartório de Registro de Imóveis ---
   { id: 46, name: 'Certidão de Imóvel', slug: toSlug('Certidão de Imóvel'), price: null, atribuicaoId: 4, category: 'Imóveis', icon: icons.BUILDING, imageSrc: productImagePaths[toSlug('Certidão de Imóvel')],
     description: 'Solicite a certidão de matrícula do seu imóvel, essencial para transações de compra e venda.',
