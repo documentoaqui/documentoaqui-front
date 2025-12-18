@@ -18,14 +18,6 @@
             e cor de fundo, então podemos usá-lo diretamente aqui.
           */}
           <CertificatesList />
-          <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KDZZB5KZ"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
         </main>
         <Footer />
       </>
