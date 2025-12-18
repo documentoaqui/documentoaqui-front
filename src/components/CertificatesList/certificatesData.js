@@ -12,16 +12,22 @@ export const icons = {
 const PRICE_FEDERAL_ESTADUAL = 43.70;
 const PRICE_MUNICIPAL = 77.30;
 
+/**
+ * Categorias VISUAIS (o usuário vê isso)
+ */
 export const categories = [
-  'imoveis',
-  'registro_civil',
-  'notas',
-  'protesto',
-  'federais_estaduais',
-  'municipais',
-  'pesquisa'
+  'Imóveis',
+  'Registro Civil',
+  'Notas',
+  'Protesto',
+  'Federais e Estaduais',
+  'Municipais',
+  'Pesquisa'
 ];
 
+/**
+ * Slug helper
+ */
 const toSlug = (str) => {
   if (!str) return '';
   return str
@@ -33,6 +39,9 @@ const toSlug = (str) => {
     .replace(/--+/g, '-');
 };
 
+/**
+ * FORMULÁRIOS
+ */
 const formTemplateRequerente = {
   groupTitle: 'Dados do(a) requerente',
   fields: [
@@ -55,13 +64,18 @@ const formTemplateCertidaoImovel = [
   formTemplateRequerente
 ];
 
+/**
+ * LISTA DE CERTIDÕES
+ */
 export const allCertificates = [
+  // ================= IMÓVEIS =================
   {
     id: 46,
     name: 'Certidão de Imóvel',
     slug: toSlug('Certidão de Imóvel'),
     price: null,
-    category: 'imoveis',
+    category: 'Imóveis',
+    categoryKey: 'imoveis',
     icon: icons.BUILDING,
     imageSrc: productImagePaths[toSlug('Certidão de Imóvel')],
     formFields: formTemplateCertidaoImovel
@@ -71,17 +85,21 @@ export const allCertificates = [
     name: 'Visualização de Matrícula',
     slug: toSlug('Visualização de Matrícula'),
     price: null,
-    category: 'imoveis',
+    category: 'Imóveis',
+    categoryKey: 'imoveis',
     icon: icons.BUILDING,
     imageSrc: productImagePaths[toSlug('Visualização de Matrícula')],
     formFields: formTemplateCertidaoImovel
   },
+
+  // ================= REGISTRO CIVIL =================
   {
     id: 49,
     name: 'Certidão de Nascimento',
     slug: toSlug('Certidão de Nascimento'),
     price: null,
-    category: 'registro_civil',
+    category: 'Registro Civil',
+    categoryKey: 'registro_civil',
     icon: icons.DOCUMENT,
     imageSrc: productImagePaths[toSlug('Certidão de Nascimento')]
   },
@@ -90,7 +108,8 @@ export const allCertificates = [
     name: 'Certidão de Casamento',
     slug: toSlug('Certidão de Casamento'),
     price: null,
-    category: 'registro_civil',
+    category: 'Registro Civil',
+    categoryKey: 'registro_civil',
     icon: icons.DOCUMENT,
     imageSrc: productImagePaths[toSlug('Certidão de Casamento')]
   },
@@ -99,53 +118,70 @@ export const allCertificates = [
     name: 'Certidão de Óbito',
     slug: toSlug('Certidão de Óbito'),
     price: null,
-    category: 'registro_civil',
+    category: 'Registro Civil',
+    categoryKey: 'registro_civil',
     icon: icons.DOCUMENT,
     imageSrc: productImagePaths[toSlug('Certidão de Óbito')]
   },
-  {
-    id: 57,
-    name: 'Certidão de Protesto',
-    slug: toSlug('Certidão de Protesto'),
-    price: null,
-    category: 'protesto',
-    icon: icons.PROTEST,
-    imageSrc: productImagePaths[toSlug('Certidão de Protesto')]
-  },
+
+  // ================= NOTAS =================
   {
     id: 67,
     name: 'Pesquisa Escrituras e Procurações por CPF/CNPJ',
     slug: toSlug('Pesquisa Escrituras e Procurações por CPF CNPJ'),
     price: 68.30,
-    category: 'notas',
+    category: 'Notas',
+    categoryKey: 'notas',
     icon: icons.SEARCH,
     imageSrc: productImagePaths[toSlug('Pesquisa Escrituras e Procurações por CPF CNPJ')]
   },
+
+  // ================= PROTESTO =================
   {
-    id: 59,
-    name: 'Pesquisa Completa de Veículo',
-    slug: toSlug('Pesquisa Completa de Veículo'),
-    price: 77.60,
-    category: 'pesquisa',
-    icon: icons.SEARCH,
-    imageSrc: productImagePaths[toSlug('Pesquisa Completa de Veículo')]
+    id: 57,
+    name: 'Certidão de Protesto',
+    slug: toSlug('Certidão de Protesto'),
+    price: null,
+    category: 'Protesto',
+    categoryKey: 'protesto',
+    icon: icons.PROTEST,
+    imageSrc: productImagePaths[toSlug('Certidão de Protesto')]
   },
+
+  // ================= FEDERAIS / ESTADUAIS =================
   {
     id: 1,
     name: 'Certidão de Distribuição da Justiça Federal (TRF)',
     slug: toSlug('Certidão de Distribuição da Justiça Federal TRF'),
     price: PRICE_FEDERAL_ESTADUAL,
-    category: 'federais_estaduais',
+    category: 'Federais e Estaduais',
+    categoryKey: 'federais_estaduais',
     icon: icons.JUSTICE,
     imageSrc: productImagePaths[toSlug('Certidão de Distribuição da Justiça Federal TRF')]
   },
+
+  // ================= MUNICIPAIS =================
   {
     id: 101,
     name: 'Certidão de Valor Venal',
     slug: toSlug('Certidão de Valor Venal'),
     price: PRICE_MUNICIPAL,
-    category: 'municipais',
+    category: 'Municipais',
+    categoryKey: 'municipais',
     icon: icons.JUSTICE,
     imageSrc: productImagePaths[toSlug('Certidão de Valor Venal')]
+  },
+
+  // ================= PESQUISA =================
+  {
+    id: 59,
+    name: 'Pesquisa Completa de Veículo',
+    slug: toSlug('Pesquisa Completa de Veículo'),
+    price: 77.60,
+    category: 'Pesquisa',
+    categoryKey: 'pesquisa',
+    icon: icons.SEARCH,
+    imageSrc: productImagePaths[toSlug('Pesquisa Completa de Veículo')]
   }
 ];
+    
