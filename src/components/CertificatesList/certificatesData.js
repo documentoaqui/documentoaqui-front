@@ -386,16 +386,19 @@ export const allCertificates = [
     { id: 5, name: 'Certidão de Antecedentes Criminais', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'nome_completo', label: 'Nome Completo'}, { name: 'cpf', label: 'CPF' }, { name: 'data_nascimento', label: 'Data de Nascimento', type: 'date' }, { name: 'nome_mae', label: 'Nome da Mãe' }], empresa: [] } },
     { id: 6, name: 'Certidão Negativa do Ministério Público Federal (MPF)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
     { id: 7, name: 'Certidão Negativa de Débitos Trabalhistas (CNDT-TST)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
-    {
+    { 
       id: 8,
       name: 'Certidão de Cumprimento da Cota de PCDs (MT)',
-      slug: toSlug('Certidão de Cumprimento da Cota de PCDs MT'),
-      category: 'Federais e Estaduais',
-      icon: icons.JUSTICE,
-      imageSrc: productImagePaths[toSlug('Certidão de Cumprimento da Cota de PCDs MT')],
-      formType: 'consulta_juridica'
+      esfera: 'Federal',
+      formFields: [
+      {
+        groupTitle: 'Dados da Empresa',
+        fields: [
+          { id: 'cnpj', label: 'CNPJ', type: 'text', required: true }
+        ]
+      }
+    ]
     },
-
 
     // { id: 8, name: 'Certidão de Cumprimento da Cota de PCDs (MT)', esfera: 'Federal', 
     //   govFormFields: { 
@@ -404,14 +407,17 @@ export const allCertificates = [
     //   } 
     // },
     { id: 9, name: 'Certidão de Débitos Trabalhistas (MT)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
-    {
+    { 
       id: 11,
       name: 'Certidão Negativa do FGTS',
-      slug: toSlug('Certidão Negativa do FGTS'),
-      category: 'Federais e Estaduais',
-      icon: icons.JUSTICE,
-      imageSrc: productImagePaths[toSlug('Certidão Negativa do FGTS')],
-      formType: 'consulta_juridica'
+      esfera: 'Federal',
+      govFormFields: { 
+        pessoa: [], 
+        empresa: [
+          { name: 'cnpj', label: 'CNPJ', required: true },
+          { name: 'cei', label: 'CEI (Opcional)', required: false }
+        ] 
+      } 
     },
 
     // { id: 11, name: 'Certidão Negativa do FGTS', esfera: 'Federal', govFormFields: { pessoa: [], empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei_opcional', label: 'CEI (Opcional)' }] } },

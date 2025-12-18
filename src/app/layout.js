@@ -32,14 +32,14 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={montserrat.className}>
-        <noscript>
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-KDZZB5KZ"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           />
-        </noscript>
+        </noscript> */}
 
         <AuthProvider>
           <CartProvider>
