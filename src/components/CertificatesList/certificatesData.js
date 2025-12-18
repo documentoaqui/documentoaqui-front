@@ -390,12 +390,14 @@ export const allCertificates = [
       id: 8,
       name: 'Certidão de Cumprimento da Cota de PCDs (MT)',
       esfera: 'Federal',
-      govFormFields: { 
-        pessoa: [], 
-        empresa: [
-          { name: 'cnpj', label: 'CNPJ' }
-        ] 
-      } 
+      formFields: [
+      {
+        groupTitle: 'Dados da Empresa',
+        fields: [
+          { id: 'cnpj', label: 'CNPJ', type: 'text', required: true }
+        ]
+      }
+    ]
     },
 
     // { id: 8, name: 'Certidão de Cumprimento da Cota de PCDs (MT)', esfera: 'Federal', 
@@ -409,13 +411,15 @@ export const allCertificates = [
       id: 11,
       name: 'Certidão Negativa do FGTS',
       esfera: 'Federal',
-      govFormFields: { 
-        pessoa: [], 
-        empresa: [
-          { name: 'cnpj', label: 'CNPJ', required: true },
-          { name: 'cei', label: 'CEI (Opcional)', required: false }
-        ] 
-      } 
+      formFields: [
+        {
+          groupTitle: 'Dados da Empresa',
+          fields: [
+            { id: 'cnpj', label: 'CNPJ', type: 'text', required: true },
+            { id: 'cei', label: 'CEI (Opcional)', type: 'text', required: false }
+          ]
+        }
+      ]
     },
 
     // { id: 11, name: 'Certidão Negativa do FGTS', esfera: 'Federal', govFormFields: { pessoa: [], empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei_opcional', label: 'CEI (Opcional)' }] } },
