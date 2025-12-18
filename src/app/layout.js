@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <head>
-        {/* Google Tag Manager */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -33,7 +32,6 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={montserrat.className}>
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-KDZZB5KZ"
