@@ -13,7 +13,7 @@ const PRICE_FEDERAL_ESTADUAL = 43.70;
 const PRICE_MUNICIPAL = 77.30;
 
 /**
- * Categorias VISUAIS (exibidas ao usuário)
+ * Categorias VISUAIS (o usuário vê isso)
  */
 export const categories = [
   'Imóveis',
@@ -25,6 +25,9 @@ export const categories = [
   'Pesquisa'
 ];
 
+/**
+ * Slug helper
+ */
 const toSlug = (str) => {
   if (!str) return '';
   return str
@@ -36,10 +39,9 @@ const toSlug = (str) => {
     .replace(/--+/g, '-');
 };
 
-/* =========================
-   FORMULÁRIOS
-========================= */
-
+/**
+ * FORMULÁRIOS
+ */
 const formTemplateRequerente = {
   groupTitle: 'Dados do(a) requerente',
   fields: [
@@ -56,59 +58,17 @@ const formTemplateCertidaoImovel = [
     fields: [
       { id: 'estado', label: 'Estado', type: 'select', required: true },
       { id: 'cidade', label: 'Cidade', type: 'select', required: true },
-      { id: 'cartorio', label: 'Cartório de Registro de Imóveis', type: 'select', required: true },
-      { id: 'numero_matricula', label: 'Número da Matrícula', type: 'text', required: true },
+      { id: 'cartorio', label: 'Cartório', type: 'select', required: true },
     ]
   },
   formTemplateRequerente
 ];
 
-const createFormTemplateRegistroCivil = (fields) => ([
-  {
-    groupTitle: 'Dados do Registro',
-    fields
-  },
-  {
-    groupTitle: 'Formato da Entrega',
-    type: 'radio',
-    options: [
-      { id: 'formato', value: 'Digital', label: 'Certidão digital (PDF)' },
-      { id: 'formato', value: 'Papel', label: 'Certidão em papel (+ frete)' }
-    ]
-  },
-  formTemplateRequerente
-]);
-
-const formTemplateNascimento = createFormTemplateRegistroCivil([
-  { id: 'nome_registrado', label: 'Nome do registrado(a)', type: 'text', required: true },
-  { id: 'nome_mae', label: 'Nome da mãe', type: 'text', required: true },
-  { id: 'nome_pai', label: 'Nome do pai', type: 'text', required: false },
-  { id: 'data_nascimento', label: 'Data de nascimento', type: 'date', required: true },
-]);
-
-const formTemplateCasamento = createFormTemplateRegistroCivil([
-  { id: 'nome_conjuge1', label: 'Nome do cônjuge 1', type: 'text', required: true },
-  { id: 'nome_conjuge2', label: 'Nome do cônjuge 2', type: 'text', required: true },
-  { id: 'data_casamento', label: 'Data do casamento', type: 'date', required: true },
-]);
-
-const formTemplateObito = createFormTemplateRegistroCivil([
-  { id: 'nome_falecido', label: 'Nome do falecido(a)', type: 'text', required: true },
-  { id: 'data_obito', label: 'Data do óbito', type: 'date', required: true },
-]);
-
-const formTemplateInterdicao = createFormTemplateRegistroCivil([
-  { id: 'nome_interditado', label: 'Nome do interditado(a)', type: 'text', required: true },
-  { id: 'data_sentenca', label: 'Data da sentença', type: 'date', required: true },
-]);
-
-/* =========================
-   CERTIDÕES
-========================= */
-
+/**
+ * LISTA DE CERTIDÕES
+ */
 export const allCertificates = [
-
-  /* ===== IMÓVEIS ===== */
+  // ================= IMÓVEIS =================
   {
     id: 46,
     name: 'Certidão de Imóvel',
@@ -132,7 +92,7 @@ export const allCertificates = [
     formFields: formTemplateCertidaoImovel
   },
 
-  /* ===== REGISTRO CIVIL ===== */
+  // ================= REGISTRO CIVIL =================
   {
     id: 49,
     name: 'Certidão de Nascimento',
@@ -141,8 +101,7 @@ export const allCertificates = [
     category: 'Registro Civil',
     categoryKey: 'registro_civil',
     icon: icons.DOCUMENT,
-    imageSrc: productImagePaths[toSlug('Certidão de Nascimento')],
-    formFields: formTemplateNascimento
+    imageSrc: productImagePaths[toSlug('Certidão de Nascimento')]
   },
   {
     id: 48,
@@ -152,8 +111,7 @@ export const allCertificates = [
     category: 'Registro Civil',
     categoryKey: 'registro_civil',
     icon: icons.DOCUMENT,
-    imageSrc: productImagePaths[toSlug('Certidão de Casamento')],
-    formFields: formTemplateCasamento
+    imageSrc: productImagePaths[toSlug('Certidão de Casamento')]
   },
   {
     id: 47,
@@ -163,22 +121,22 @@ export const allCertificates = [
     category: 'Registro Civil',
     categoryKey: 'registro_civil',
     icon: icons.DOCUMENT,
-    imageSrc: productImagePaths[toSlug('Certidão de Óbito')],
-    formFields: formTemplateObito
-  },
-  {
-    id: 43,
-    name: 'Certidão de Interdição',
-    slug: toSlug('Certidão de Interdição'),
-    price: null,
-    category: 'Registro Civil',
-    categoryKey: 'registro_civil',
-    icon: icons.DOCUMENT,
-    imageSrc: productImagePaths[toSlug('Certidão de Interdição')],
-    formFields: formTemplateInterdicao
+    imageSrc: productImagePaths[toSlug('Certidão de Óbito')]
   },
 
-  /* ===== PROTESTO ===== */
+  // ================= NOTAS =================
+  {
+    id: 67,
+    name: 'Pesquisa Escrituras e Procurações por CPF/CNPJ',
+    slug: toSlug('Pesquisa Escrituras e Procurações por CPF CNPJ'),
+    price: 68.30,
+    category: 'Notas',
+    categoryKey: 'notas',
+    icon: icons.SEARCH,
+    imageSrc: productImagePaths[toSlug('Pesquisa Escrituras e Procurações por CPF CNPJ')]
+  },
+
+  // ================= PROTESTO =================
   {
     id: 57,
     name: 'Certidão de Protesto',
@@ -187,11 +145,10 @@ export const allCertificates = [
     category: 'Protesto',
     categoryKey: 'protesto',
     icon: icons.PROTEST,
-    imageSrc: productImagePaths[toSlug('Certidão de Protesto')],
-    formFields: formTemplateRequerente
+    imageSrc: productImagePaths[toSlug('Certidão de Protesto')]
   },
 
-  /* ===== FEDERAIS / ESTADUAIS ===== */
+  // ================= FEDERAIS / ESTADUAIS =================
   {
     id: 1,
     name: 'Certidão de Distribuição da Justiça Federal (TRF)',
@@ -200,11 +157,10 @@ export const allCertificates = [
     category: 'Federais e Estaduais',
     categoryKey: 'federais_estaduais',
     icon: icons.JUSTICE,
-    imageSrc: productImagePaths[toSlug('Certidão de Distribuição da Justiça Federal TRF')],
-    formFields: formTemplateRequerente
+    imageSrc: productImagePaths[toSlug('Certidão de Distribuição da Justiça Federal TRF')]
   },
 
-  /* ===== MUNICIPAIS ===== */
+  // ================= MUNICIPAIS =================
   {
     id: 101,
     name: 'Certidão de Valor Venal',
@@ -213,11 +169,10 @@ export const allCertificates = [
     category: 'Municipais',
     categoryKey: 'municipais',
     icon: icons.JUSTICE,
-    imageSrc: productImagePaths[toSlug('Certidão de Valor Venal')],
-    formFields: formTemplateRequerente
+    imageSrc: productImagePaths[toSlug('Certidão de Valor Venal')]
   },
 
-  /* ===== PESQUISA ===== */
+  // ================= PESQUISA =================
   {
     id: 59,
     name: 'Pesquisa Completa de Veículo',
@@ -226,8 +181,7 @@ export const allCertificates = [
     category: 'Pesquisa',
     categoryKey: 'pesquisa',
     icon: icons.SEARCH,
-    imageSrc: productImagePaths[toSlug('Pesquisa Completa de Veículo')],
-    formFields: formTemplateRequerente
-  },
+    imageSrc: productImagePaths[toSlug('Pesquisa Completa de Veículo')]
+  }
 ];
-      
+    
