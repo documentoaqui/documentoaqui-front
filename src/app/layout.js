@@ -17,7 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <head>
-         <script
+        {/* Google Tag Manager */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -28,17 +31,20 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        {/* End Google Tag Manager */}
       </head>
 
       <body className={montserrat.className}>
+        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-XXXX"
             height="0"
             width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
+            style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        {/* End Google Tag Manager (noscript) */}
 
         <AuthProvider>
           <CartProvider>{children}</CartProvider>
