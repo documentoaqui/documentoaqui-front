@@ -132,6 +132,31 @@ export default function DetalhesPedidoPage() {
     return () => clearInterval(interval);
   }, [pedido, params.id]);
 
+  const baixarArquivo = async (arquivo) => {
+    try {
+      const response = await api.get(
+        `/pedidos/${pedido.id}/arquivos/${arquivo.id}/download`,
+        { responseType: 'blob' }
+      );
+
+      const blob = new Blob([response.data], {
+        type: arquivo.mimeType || 'application/octet-stream'
+      });
+
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = arquivo.nomeOriginal;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Erro ao baixar arquivo:', err);
+      alert('Erro ao baixar o arquivo.');
+    }
+  };
+
   if (authLoading || loading) return <PageLoader />;
 
   if (error || !pedido) {
@@ -162,89 +187,28 @@ export default function DetalhesPedidoPage() {
             <div className={styles.cardHeader}>
               <div>
                 <h1 className={styles.protocolo}>Pedido #{pedido.protocolo}</h1>
-                <p className={styles.data}>Realizado em: {new Date(pedido.createdAt).toLocaleDateString('pt-BR')}</p>
+                <p className={styles.data}>
+                  Realizado em: {new Date(pedido.createdAt).toLocaleDateString('pt-BR')}
+                </p>
               </div>
               <StatusBadge status={pedido.status} />
             </div>
 
             <div className={styles.cardBody}>
-              {pedido.status === 'Aguardando Pagamento' && (
-                <p className={styles.liveStatus}>⏳ Aguardando confirmação do pagamento…</p>
-              )}
-
-              {pedido.status === 'Processando' && (
-                <p className={styles.liveStatus}>🔄 Pagamento confirmado! Pedido em processamento.</p>
-              )}
-
               <section className={styles.section}>
-                <h2 className={styles.sectionTitle}>Andamento</h2>
-                {pedido.observacoesAdmin && (
-                  <div className={styles.adminMessage}>
-                    <strong>Mensagem do Administrador:</strong>
-                    <p>{pedido.observacoesAdmin}</p>
-                  </div>
-                )}
-                {pedido.codigoRastreio && (
-                  <div className={styles.rastreio}>
-                    <PackageIcon />
-                    <div>
-                      <strong>Código de Rastreio:</strong>
-                      <span>{pedido.codigoRastreio}</span>
-                    </div>
-                  </div>
-                )}
-              </section>
-
-              {arquivosAdmin.length > 0 && (
-                <section className={styles.section}>
-                  <h2 className={styles.sectionTitle}>Documentos Recebidos</h2>
-                  <div className={styles.downloadList}>
-                    {arquivosAdmin.map(a => (
-                      <a
-                        key={a.id}
-                        href={`${process.env.NEXT_PUBLIC_API_URL}/api/pedidos/${pedido.id}/arquivos/${a.id}/download`}
-                        className={styles.downloadButton}
-                        download={a.nomeOriginal}
-                        rel="noopener noreferrer"
-                      >
-                        <DownloadIcon />
-                        Baixar: {a.nomeOriginal}
-                      </a>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {arquivosCliente.length > 0 && (
-                <section className={styles.section}>
-                  <h2 className={styles.sectionTitle}>Seus Anexos Enviados</h2>
-                  <ul className={styles.anexosList}>
-                    {arquivosCliente.map(a => (
-                      <li key={a.id}>{a.nomeOriginal}</li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
-              {pedido.itens.map((item, index) => (
-                <DetalhesDoFormulario key={index} item={item} />
-              ))}
-
-              <section className={styles.section}>
-                <h2 className={styles.sectionTitle}>Dados do Solicitante</h2>
-                <dl className={styles.formDataList}>
-                  <div className={styles.formDataItem}><dt>Nome</dt><dd>{pedido.dadosCliente?.nome}</dd></div>
-                  <div className={styles.formDataItem}><dt>CPF</dt><dd>{pedido.dadosCliente?.cpf}</dd></div>
-                  <div className={styles.formDataItem}><dt>E-mail</dt><dd>{pedido.dadosCliente?.email}</dd></div>
-                  <div className={styles.formDataItem}><dt>Telefone</dt><dd>{pedido.dadosCliente?.telefone}</dd></div>
-                </dl>
-              </section>
-
-              <section className={`${styles.section} ${styles.noBorder}`}>
-                <h2 className={styles.sectionTitle}>Resumo Financeiro</h2>
-                <div className={styles.totalRow}>
-                  <strong>Total Pago</strong>
-                  <span>R$ {parseFloat(pedido.valorTotal).toFixed(2).replace('.', ',')}</span>
+                <h2 className={styles.sectionTitle}>Documentos Recebidos</h2>
+                <div className={styles.downloadList}>
+                  {arquivosAdmin.map(a => (
+                    <button
+                      key={a.id}
+                      type="button"
+                      className={styles.downloadButton}
+                      onClick={() => baixarArquivo(a)}
+                    >
+                      <DownloadIcon />
+                      Baixar: {a.nomeOriginal}
+                    </button>
+                  ))}
                 </div>
               </section>
             </div>
