@@ -133,6 +133,10 @@ export default function CheckoutPage() {
     setClientData(prev => ({ ...prev, [name]: value }));
   };
 
+  const mp = typeof window !== 'undefined'
+  ? new window.MercadoPago(process.env.NEXT_PUBLIC_MP_PUBLIC_KEY)
+  : null;
+
   const handleFinalizarCompra = async (e) => {
     e.preventDefault();
 
@@ -164,7 +168,18 @@ export default function CheckoutPage() {
       });
 
       // Por enquanto apenas redireciona (modal vem depois)
-      window.location.href = checkoutResponse.data.checkoutUrl;
+    //   window.location.href = checkoutResponse.data.checkoutUrl;
+    const { preferenceId } = checkoutResponse.data;
+
+    if (!preferenceId) {
+    throw new Error('PreferenceId não retornado');
+    }
+
+    mp.checkout({
+    preference: { id: preferenceId },
+    autoOpen: true
+    });
+
 
     } catch (err) {
       console.error(err);
