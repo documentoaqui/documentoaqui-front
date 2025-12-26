@@ -28,7 +28,7 @@ export default function PagamentoRetornoPage() {
         if (data.status === 'Processando' || data.status === 'Concluído') {
           setStatus('aprovado');
           setTimeout(() => {
-            router.push(`/minha-conta/meus-pedidos/${data.id}`);
+            router.push(`/minha-conta/painel`);
           }, 2000);
         }
 
@@ -86,7 +86,7 @@ export default function PagamentoRetornoPage() {
 
             {(status === 'recusado' || status === 'erro') && pedidoId && (
               <button
-                onClick={() => router.push(`/minha-conta/meus-pedidos/${pedidoId}`)}
+                onClick={() => router.push(`/minha-conta/painel`)}
                 style={{ marginTop: 20 }}
               >
                 Ver Pedido
