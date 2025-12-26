@@ -146,13 +146,14 @@ export default function CheckoutPage() {
             });
             const { checkoutUrl } = checkoutResponse.data;
 
-            if (activePayment === 'pix') {
-                window.open(checkoutUrl, '_blank');
-                alert('Pagamento PIX gerado! Assim que confirmado, seu pedido será atualizado automaticamente.');
-            } else {
-                // window.location.href = checkoutUrl;
-                window.open(checkoutUrl, '_blank');
-            }
+            // if (activePayment === 'pix') {
+            //     window.open(checkoutUrl, '_blank');
+            //     alert('Pagamento PIX gerado! Assim que confirmado, seu pedido será atualizado automaticamente.');
+            // } else {
+            //     // window.location.href = checkoutUrl;
+            //     window.open(checkoutUrl, '_blank');
+            // }
+            window.location.href = checkoutUrl;
 
             setLoading(false);
 
