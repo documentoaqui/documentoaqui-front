@@ -411,7 +411,7 @@ export const allCertificates = [
       id: 11,
       name: 'Certidão Negativa do FGTS',
       esfera: 'Federal',
-      category: 'Certidões Federais e Estaduais',
+      category: 'Federais e Estaduais',
       slug: toSlug('Certidão Negativa do FGTS'),
       price: PRICE_FEDERAL_ESTADUAL,
       icon: icons.JUSTICE,

@@ -13,7 +13,7 @@ const toSlug = (str) => {
 
 export default function StepFormato({ formData, handleChange, productData }) {
     const { category, slug } = productData;
-    const isGovCertificate = category === 'Certidões Federais e Estaduais' || category === 'Certidões Municipais';
+    const isGovCertificate = category === 'Federais e Estaduais' || category === 'Municipais';
 
     let formatOptions = [];
 

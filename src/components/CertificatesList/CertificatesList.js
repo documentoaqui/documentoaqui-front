@@ -22,7 +22,7 @@ const CertificatesList = () => {
     const searchMatch = certificate.name.toLowerCase().includes(searchTerm.toLowerCase());
     
     // --- LÓGICA DO SUB-FILTRO APLICADA AQUI ---
-    const subFilterMatch = activeCategory !== 'Certidões Federais e Estaduais' || 
+    const subFilterMatch = activeCategory !== 'Federais e Estaduais' || 
                            activeSubFilter === 'Todos' || 
                            certificate.esfera === activeSubFilter;
 
@@ -32,7 +32,7 @@ const CertificatesList = () => {
   // Reseta a contagem e o sub-filtro ao mudar de categoria ou busca
   useEffect(() => {
     setVisibleCount(ITEMS_PER_PAGE);
-    if (activeCategory !== 'Certidões Federais e Estaduais') {
+    if (activeCategory !== 'Federais e Estaduais') {
       setActiveSubFilter('Todos');
     }
   }, [activeCategory, searchTerm]);
@@ -86,7 +86,7 @@ const CertificatesList = () => {
             </div>
 
             {/* --- RENDERIZAÇÃO CONDICIONAL DO SUB-FILTRO --- */}
-            {activeCategory === 'Certidões Federais e Estaduais' && (
+            {activeCategory === 'Federais e Estaduais' && (
                 <div className={styles.subFilterHeader}>
                     <button onClick={() => setActiveSubFilter('Todos')} className={activeSubFilter === 'Todos' ? styles.activeSubFilter : ''}>Todos</button>
                     <button onClick={() => setActiveSubFilter('Federal')} className={activeSubFilter === 'Federal' ? styles.activeSubFilter : ''}>Federais</button>
