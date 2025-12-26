@@ -30,7 +30,8 @@ import StepPesquisaAvancada from './steps/StepPesquisaAvancada';
 import StepConfirmacaoLGPD from './steps/StepConfirmacaoLGPD';
 import StepProtestoCartorio from './steps/StepProtestoCartorio';
 import StepProtestoDados from './steps/StepProtestoDados';
-import StepGovDados from './steps/StepGovDados';
+// import StepGovDados from './steps/StepGovDados';
+import StepFederalDados from './steps/StepFederalDados';
 import StepConsultaJuridica from './steps/StepConsultaJuridica';
 
 // Componentes Auxiliares
@@ -111,7 +112,8 @@ export default function MultiStepForm({ productData }) {
             ];
         } else if (isGovCertificate) {
             const baseFlow = [
-                { id: 'dadosCertidaoGov', title: 'Dados da Certidão', Component: StepGovDados },
+                // { id: 'dadosCertidaoGov', title: 'Dados da Certidão', Component: StepGovDados },
+                { id: 'dadosCertidaoGov', title: 'Dados da Certidão', Component: StepFederalDados },
                 formatoStep
             ];
             if (isPapel) {

@@ -407,8 +407,33 @@ export const allCertificates = [
     //   } 
     // },
     { id: 9, name: 'Certidão de Débitos Trabalhistas (MT)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
+    {
+      id: 11,
+      name: 'Certidão Negativa do FGTS',
+      slug: toSlug('Certidão Negativa do FGTS'),
+      esfera: 'Federal',
+      category: 'Federais e Estaduais',
+      price: PRICE_FEDERAL_ESTADUAL,
+      icon: icons.JUSTICE,
+      imageSrc: productImagePaths[toSlug('Certidão Negativa do FGTS')],
 
-    { id: 11, name: 'Certidão Negativa do FGTS', esfera: 'Federal', govFormFields: { pessoa: [], empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei_opcional', label: 'CEI (Opcional)' }] } },
+      // 🚨 MUITO IMPORTANTE
+      formFields: null,
+
+      govFormFields: {
+        needsState: true,
+        pessoa: [], // FGTS não é para pessoa física
+        empresa: [
+          { name: 'cnpj', label: 'CNPJ', required: true },
+          { name: 'cei', label: 'CEI (opcional)', required: false }
+        ]
+      },
+
+      description: 'Certidão que comprova a regularidade do empregador junto ao FGTS.',
+    },
+
+
+    // { id: 11, name: 'Certidão Negativa do FGTS', esfera: 'Federal', govFormFields: { pessoa: [], empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei_opcional', label: 'CEI (Opcional)' }] } },
     { id: 12, name: 'Cadastro de Imóveis Rurais (CAFIR)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'nirf_cib', label: 'NIRF / CIB' }], empresa: [] } },
     { id: 13, name: 'Certidão de Tributos Federais de Imóvel Rural (ITR)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'nirf', label: 'NIRF' }], empresa: [] } },
     { id: 14, name: 'Certidão de Embargos (IBAMA)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
