@@ -21,18 +21,18 @@ const maskCNPJ = (v) =>
 export default function StepFederalDados({ formData, handleChange, productData, error }) {
   const { govFormFields = {}, name } = productData;
 
+  const hasPessoa = govFormFields.pessoa?.length > 0;
+  const hasEmpresa = govFormFields.empresa?.length > 0;
+
   const [activeTab, setActiveTab] = useState(() => {
     if (formData.tipo_pessoa) return formData.tipo_pessoa;
-    if (govFormFields.pessoa?.length) return 'Pessoa';
-    if (govFormFields.empresa?.length) return 'Empresa';
+    if (hasPessoa) return 'Pessoa';
+    if (hasEmpresa) return 'Empresa';
     return 'Pessoa';
   });
 
   const [estados, setEstados] = useState([]);
   const [loadingEstados, setLoadingEstados] = useState(false);
-
-  const hasPessoa = govFormFields.pessoa?.length > 0;
-  const hasEmpresa = govFormFields.empresa?.length > 0;
 
   const fieldsToRender =
     activeTab === 'Pessoa'
@@ -56,8 +56,8 @@ export default function StepFederalDados({ formData, handleChange, productData, 
   const handleInputChange = (e) => {
     let { name, value } = e.target;
 
-    if (name.includes('cpf')) value = maskCPF(value);
-    if (name.includes('cnpj')) value = maskCNPJ(value);
+    if (name.toLowerCase().includes('cpf')) value = maskCPF(value);
+    if (name.toLowerCase().includes('cnpj')) value = maskCNPJ(value);
 
     handleChange({ target: { name, value } });
   };
@@ -69,6 +69,7 @@ export default function StepFederalDados({ formData, handleChange, productData, 
         Informe os dados para a emissão da {name}.
       </p>
 
+      {/* ESTADO */}
       {govFormFields.needsState && (
         <div className={styles.formGroup}>
           <label>Estado *</label>
@@ -84,6 +85,7 @@ export default function StepFederalDados({ formData, handleChange, productData, 
         </div>
       )}
 
+      {/* ABAS */}
       {hasPessoa && hasEmpresa && (
         <div className={styles.tabContainer}>
           <button
@@ -103,16 +105,21 @@ export default function StepFederalDados({ formData, handleChange, productData, 
         </div>
       )}
 
+      {/* CAMPOS DINÂMICOS */}
       <div className={styles.formContent}>
         {fieldsToRender.map(field => (
           <div key={field.name} className={styles.formGroup}>
-            <label>{field.label}{field.required !== false && '*'}</label>
+            <label>
+              {field.label}
+              {field.required !== false && ' *'}
+            </label>
             <input
-              type="text"
+              type={field.type || 'text'}
               name={field.name}
               value={formData[field.name] || ''}
               onChange={handleInputChange}
               required={field.required !== false}
+              placeholder={field.placeholder || ''}
             />
           </div>
         ))}
