@@ -410,27 +410,25 @@ export const allCertificates = [
     {
       id: 11,
       name: 'Certidão Negativa do FGTS',
-      slug: toSlug('Certidão Negativa do FGTS'),
       esfera: 'Federal',
-      category: 'Federais e Estaduais',
-      price: PRICE_FEDERAL_ESTADUAL,
-      icon: icons.JUSTICE,
-      imageSrc: productImagePaths[toSlug('Certidão Negativa do FGTS')],
-
-      // 🚨 MUITO IMPORTANTE
-      formFields: null,
-
       govFormFields: {
         needsState: true,
-        pessoa: [], // FGTS não é para pessoa física
+        pessoa: [],
         empresa: [
-          { name: 'cnpj', label: 'CNPJ', required: true },
-          { name: 'cei', label: 'CEI (opcional)', required: false }
+          {
+            name: 'cnpj',
+            label: 'CNPJ',
+            required: true
+          },
+          {
+            name: 'cei',
+            label: 'CEI (opcional)',
+            required: false
+          }
         ]
-      },
-
-      description: 'Certidão que comprova a regularidade do empregador junto ao FGTS.',
+      }
     },
+
 
 
     // { id: 11, name: 'Certidão Negativa do FGTS', esfera: 'Federal', govFormFields: { pessoa: [], empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei_opcional', label: 'CEI (Opcional)' }] } },
