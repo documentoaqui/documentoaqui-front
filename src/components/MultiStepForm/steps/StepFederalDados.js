@@ -1,91 +1,122 @@
-// Salve em: src/components/MultiStepForm/steps/StepFederalDados.js
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './StepFederalDados.module.css';
+import SearchableDropdown from './SearchableDropdown';
+import api from '@/services/api';
 
-// --- COMPONENTE GENÉRICO PARA CAMPO DE FORMULÁRIO ---
-const FormField = ({ field, value, onChange }) => {
-  const { name, label, type = 'text', options } = field;
+const maskCPF = (v) =>
+  v.replace(/\D/g, '').slice(0, 11)
+   .replace(/(\d{3})(\d)/, '$1.$2')
+   .replace(/(\d{3})(\d)/, '$1.$2')
+   .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
 
-  // Função para aplicar máscaras
-  const handleChangeWithMask = (e) => {
-    let { value } = e.target;
-    if (name.toLowerCase().includes('cpf')) {
-      value = value.replace(/\D/g, '').slice(0, 11).replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-    } else if (name.toLowerCase().includes('cnpj')) {
-      value = value.replace(/\D/g, '').slice(0, 14).replace(/(\d{2})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1/$2').replace(/(\d{4})(\d)/, '$1-$2');
-    }
-    onChange({ target: { name, value } });
-  };
+const maskCNPJ = (v) =>
+  v.replace(/\D/g, '').slice(0, 14)
+   .replace(/(\d{2})(\d)/, '$1.$2')
+   .replace(/(\d{3})(\d)/, '$1.$2')
+   .replace(/(\d{3})(\d)/, '$1/$2')
+   .replace(/(\d{4})(\d)/, '$1-$2');
 
-  const commonProps = {
-    id: name,
-    name: name,
-    value: value || '',
-    onChange: name.toLowerCase().includes('cpf') || name.toLowerCase().includes('cnpj') ? handleChangeWithMask : onChange,
-    required: field.required !== false // Padrão é true
-  };
+export default function StepFederalDados({ formData, handleChange, productData, error }) {
+  const { govFormFields = {}, name } = productData;
 
-  return (
-    <div className={styles.formGroup}>
-      <label htmlFor={name}>{label}{commonProps.required && '*'}</label>
-      {type === 'select' ? (
-        <select {...commonProps}>
-          <option value="">Selecione</option>
-          {options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
-        </select>
-      ) : (
-        <input type={type} {...commonProps} />
-      )}
-    </div>
-  );
-};
-
-export default function StepFederalDados({ formData, handleChange, error, productData }) {
-  // const [activeTab, setActiveTab] = useState(formData.tipo_pessoa || 'Pessoa');
   const [activeTab, setActiveTab] = useState(() => {
     if (formData.tipo_pessoa) return formData.tipo_pessoa;
-    if (govFormFields?.pessoa?.length > 0) return 'Pessoa';
-    if (govFormFields?.empresa?.length > 0) return 'Empresa';
+    if (govFormFields.pessoa?.length) return 'Pessoa';
+    if (govFormFields.empresa?.length) return 'Empresa';
     return 'Pessoa';
   });
 
-  
-  const { govFormFields } = productData;
-  const hasPessoa = govFormFields?.pessoa?.length > 0;
-  const hasEmpresa = govFormFields?.empresa?.length > 0;
+  const [estados, setEstados] = useState([]);
+  const [loadingEstados, setLoadingEstados] = useState(false);
+
+  const hasPessoa = govFormFields.pessoa?.length > 0;
+  const hasEmpresa = govFormFields.empresa?.length > 0;
+
+  const fieldsToRender =
+    activeTab === 'Pessoa'
+      ? govFormFields.pessoa || []
+      : govFormFields.empresa || [];
+
+  useEffect(() => {
+    if (govFormFields.needsState) {
+      setLoadingEstados(true);
+      api.get('/cartorios/estados')
+        .then(res => setEstados(res.data))
+        .finally(() => setLoadingEstados(false));
+    }
+  }, [govFormFields.needsState]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     handleChange({ target: { name: 'tipo_pessoa', value: tab } });
   };
 
-  const fieldsToRender = activeTab === 'Pessoa' ? govFormFields?.pessoa : govFormFields?.empresa;
+  const handleInputChange = (e) => {
+    let { name, value } = e.target;
+
+    if (name.includes('cpf')) value = maskCPF(value);
+    if (name.includes('cnpj')) value = maskCNPJ(value);
+
+    handleChange({ target: { name, value } });
+  };
 
   return (
     <div>
       <h3 className={styles.stepTitle}>1. Dados da Certidão</h3>
       <p className={styles.stepDescription}>
-        Informe os dados no formulário abaixo para iniciarmos a solicitação da {productData.name}.
+        Informe os dados para a emissão da {name}.
       </p>
+
+      {govFormFields.needsState && (
+        <div className={styles.formGroup}>
+          <label>Estado *</label>
+          <SearchableDropdown
+            options={estados}
+            value={formData.estado || ''}
+            onChange={(value) =>
+              handleChange({ target: { name: 'estado', value } })
+            }
+            loading={loadingEstados}
+            placeholder="Selecione o Estado"
+          />
+        </div>
+      )}
 
       {hasPessoa && hasEmpresa && (
         <div className={styles.tabContainer}>
-          <button type="button" onClick={() => handleTabChange('Pessoa')} className={`${styles.tabButton} ${activeTab === 'Pessoa' ? styles.activeTab : ''}`}>Pessoa</button>
-          <button type="button" onClick={() => handleTabChange('Empresa')} className={`${styles.tabButton} ${activeTab === 'Empresa' ? styles.activeTab : ''}`}>Empresa</button>
+          <button
+            type="button"
+            onClick={() => handleTabChange('Pessoa')}
+            className={activeTab === 'Pessoa' ? styles.activeTab : styles.tabButton}
+          >
+            Pessoa
+          </button>
+          <button
+            type="button"
+            onClick={() => handleTabChange('Empresa')}
+            className={activeTab === 'Empresa' ? styles.activeTab : styles.tabButton}
+          >
+            Empresa
+          </button>
         </div>
       )}
-      
+
       <div className={styles.formContent}>
-        {fieldsToRender?.map(field => (
-          <FormField
-            key={field.name}
-            field={field}
-            value={formData[field.name]}
-            onChange={handleChange}
-          />
+        {fieldsToRender.map(field => (
+          <div key={field.name} className={styles.formGroup}>
+            <label>{field.label}{field.required !== false && '*'}</label>
+            <input
+              type="text"
+              name={field.name}
+              value={formData[field.name] || ''}
+              onChange={handleInputChange}
+              required={field.required !== false}
+            />
+          </div>
         ))}
+
         {error && <small className={styles.errorMessage}>{error}</small>}
       </div>
     </div>
