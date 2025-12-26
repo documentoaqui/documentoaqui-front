@@ -410,37 +410,25 @@ export const allCertificates = [
     {
       id: 11,
       name: 'Certidão Negativa do FGTS',
-      esfera: 'Federal',
-      category: 'Federais e Estaduais',
       slug: toSlug('Certidão Negativa do FGTS'),
+
+      // ⚠️ ESSENCIAL
+      category: 'Federais e Estaduais',
+
       price: PRICE_FEDERAL_ESTADUAL,
       icon: icons.JUSTICE,
-      debug: 'FGTS',
       imageSrc: productImagePaths[toSlug('Certidão Negativa do FGTS')] || '/certidoes/default-federal.png',
 
       govFormFields: {
         needsState: true,
-
         pessoa: [],
-
         empresa: [
-          {
-            name: 'cnpj',
-            label: 'CNPJ',
-            required: true
-          },
-          {
-            name: 'cei',
-            label: 'CEI (opcional)',
-            required: false
-          }
+          { name: 'cnpj', label: 'CNPJ', required: true },
+          { name: 'cei', label: 'CEI (opcional)', required: false }
         ]
-      },
-
-      description: 'Certidão que comprova a regularidade da empresa perante o FGTS.',
-      longDescription: 'Documento emitido pela Caixa Econômica Federal que comprova a inexistência de débitos relativos ao FGTS.',
-      faq: '[{"q":"Quem precisa dessa certidão?","a":"Empresas que desejam comprovar regularidade trabalhista para contratos, licitações ou financiamentos."}]'
+      }
     },
+
 
 
 
