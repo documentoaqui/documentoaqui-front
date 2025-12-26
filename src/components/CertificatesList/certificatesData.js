@@ -409,10 +409,9 @@ export const allCertificates = [
     { id: 9, name: 'Certidão de Débitos Trabalhistas (MT)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
     {
       id: 11,
-      name: 'Certidão Negativa do FGTS -teste',
+      name: 'Certidão Negativa do FGTS',
       slug: toSlug('Certidão Negativa do FGTS'),
 
-      // ⚠️ ESSENCIAL
       category: 'Federais e Estaduais',
 
       price: PRICE_FEDERAL_ESTADUAL,
