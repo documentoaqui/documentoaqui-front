@@ -408,18 +408,22 @@ export const allCertificates = [
     // },
     { id: 9, name: 'Certidão de Débitos Trabalhistas (MT)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
     {
-      id: 11,
-      name: 'Certidão Negativa do FGTS',
-      esfera: 'Federal',
-      govFormFields: { 
-        needsState: true,
-        pessoa: [], 
-        empresa: [
-          { name: 'cnpj', label: 'CNPJ', required: true },
-          { name: 'cei', label: 'CEI (Opcional)', required: false }
-        ] 
-      } 
-    },
+        id: 11,
+        name: 'Certidão Negativa do FGTS',
+        esfera: 'Federal',
+        category: 'Federais e Estaduais',
+
+        govFormFields: {
+          needsState: true,
+          pessoa: [],
+          empresa: [
+            { name: 'cnpj', label: 'CNPJ', required: true },
+            { name: 'cei', label: 'CEI (Opcional)', required: false }
+          ]
+        },
+        formFields: []
+      },
+
 
 
     // { id: 11, name: 'Certidão Negativa do FGTS', esfera: 'Federal', govFormFields: { pessoa: [], empresa: [{ name: 'cnpj', label: 'CNPJ' }, { name: 'cei_opcional', label: 'CEI (Opcional)' }] } },
