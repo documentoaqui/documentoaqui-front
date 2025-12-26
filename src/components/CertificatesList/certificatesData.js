@@ -415,15 +415,14 @@ export const allCertificates = [
       slug: toSlug('Certidão Negativa do FGTS'),
       price: PRICE_FEDERAL_ESTADUAL,
       icon: icons.JUSTICE,
+      debug: 'FGTS',
       imageSrc: productImagePaths[toSlug('Certidão Negativa do FGTS')] || '/certidoes/default-federal.png',
 
       govFormFields: {
         needsState: true,
 
-        // ⚠️ IMPORTANTE: pessoa vazio
         pessoa: [],
 
-        // ⚠️ name (não id)
         empresa: [
           {
             name: 'cnpj',

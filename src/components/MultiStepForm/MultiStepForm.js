@@ -49,6 +49,9 @@ const toSlug = (str) => {
     .replace(/[^\w-]+/g, '')
     .replace(/--+/g, '-');
 };
+console.log('PRODUTO ATUAL:', productData.name);
+console.log('CATEGORIA:', productData.category);
+console.log('GOV:', productData.govFormFields);
 
 export default function MultiStepForm({ productData }) {
     const { addToCart } = useCart();
