@@ -408,31 +408,41 @@ export const allCertificates = [
     // },
     { id: 9, name: 'Certidão de Débitos Trabalhistas (MT)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
     {
-  id: 11,
-  name: 'Certidão Negativa do FGTS',
-  esfera: 'Federal',
-  category: 'Certidões Federais e Estaduais',
-  slug: toSlug('Certidão Negativa do FGTS'),
+      id: 11,
+      name: 'Certidão Negativa do FGTS',
+      esfera: 'Federal',
+      category: 'Certidões Federais e Estaduais',
+      slug: toSlug('Certidão Negativa do FGTS'),
+      price: PRICE_FEDERAL_ESTADUAL,
+      icon: icons.JUSTICE,
+      imageSrc: productImagePaths[toSlug('Certidão Negativa do FGTS')] || '/certidoes/default-federal.png',
 
-  govFormFields: {
-    needsState: true,
+      govFormFields: {
+        needsState: true,
 
-    pessoa: [],
+        // ⚠️ IMPORTANTE: pessoa vazio
+        pessoa: [],
 
-    empresa: [
-      {
-        name: 'cnpj',
-        label: 'CNPJ',
-        required: true
+        // ⚠️ name (não id)
+        empresa: [
+          {
+            name: 'cnpj',
+            label: 'CNPJ',
+            required: true
+          },
+          {
+            name: 'cei',
+            label: 'CEI (opcional)',
+            required: false
+          }
+        ]
       },
-      {
-        name: 'cei',
-        label: 'CEI (opcional)',
-        required: false
-      }
-    ]
-  }
-},
+
+      description: 'Certidão que comprova a regularidade da empresa perante o FGTS.',
+      longDescription: 'Documento emitido pela Caixa Econômica Federal que comprova a inexistência de débitos relativos ao FGTS.',
+      faq: '[{"q":"Quem precisa dessa certidão?","a":"Empresas que desejam comprovar regularidade trabalhista para contratos, licitações ou financiamentos."}]'
+    },
+
 
 
 
