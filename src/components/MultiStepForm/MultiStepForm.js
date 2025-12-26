@@ -102,7 +102,7 @@ export default function MultiStepForm({ productData }) {
         const requerenteStep = { id: 'requerente', title: 'Identificação', Component: StepRequerente };
         const confirmacaoLgpdStep = { id: 'confirmacaoLgpd', title: 'Termos de Uso', Component: StepConfirmacaoLGPD };
 
-        const isGovCertificate = category === 'Certidões Federais e Estaduais' || category === 'Certidões Municipais';
+        const isGovCertificate = category === 'Federais e Estaduais' || category === 'Municipais';
         const isPapel = formato === 'Certidão em papel' || formato === 'Certidão Transcrita' || formato === 'Certidão Reprográfica';
 
         if (slug === toSlug('Consulta Jurídica')) {
