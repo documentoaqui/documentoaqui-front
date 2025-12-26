@@ -43,7 +43,14 @@ const FormField = ({ field, value, onChange }) => {
 };
 
 export default function StepFederalDados({ formData, handleChange, error, productData }) {
-  const [activeTab, setActiveTab] = useState(formData.tipo_pessoa || 'Pessoa');
+  // const [activeTab, setActiveTab] = useState(formData.tipo_pessoa || 'Pessoa');
+  const [activeTab, setActiveTab] = useState(() => {
+    if (formData.tipo_pessoa) return formData.tipo_pessoa;
+    if (govFormFields?.pessoa?.length > 0) return 'Pessoa';
+    if (govFormFields?.empresa?.length > 0) return 'Empresa';
+    return 'Pessoa';
+  });
+
   
   const { govFormFields } = productData;
   const hasPessoa = govFormFields?.pessoa?.length > 0;
