@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <head>
-        {/* Google Tag Manager - bootstrap */}
+        {/* Google Tag Manager */}
         <Script
           id="gtm-bootstrap"
           strategy="afterInteractive"
@@ -33,6 +33,13 @@ export default function RootLayout({ children }) {
               })(window,document,'script','dataLayer','GTM-KDZZB5KZ');
             `,
           }}
+        />
+
+        {/* 🔥 MERCADO PAGO SDK (OBRIGATÓRIO PARA O MODAL) */}
+        <Script
+          id="mercadopago-sdk"
+          src="https://sdk.mercadopago.com/js/v2"
+          strategy="afterInteractive"
         />
       </head>
 
