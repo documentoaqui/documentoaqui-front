@@ -153,7 +153,6 @@ export default function CheckoutPage() {
             //     // window.location.href = checkoutUrl;
             //     window.open(checkoutUrl, '_blank');
             // }
-            window.location.href = checkoutUrl;
 
             setLoading(false);
 
