@@ -420,7 +420,9 @@ export const allCertificates = [
 
       govFormFields: {
         needsState: true,
+
         pessoa: [],
+
         empresa: [
           { name: 'cnpj', label: 'CNPJ', required: true },
           { name: 'cei', label: 'CEI (opcional)', required: false }
