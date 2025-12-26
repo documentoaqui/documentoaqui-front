@@ -409,7 +409,7 @@ export const allCertificates = [
     { id: 9, name: 'Certidão de Débitos Trabalhistas (MT)', esfera: 'Federal', govFormFields: { pessoa: [{ name: 'cpf', label: 'CPF' }], empresa: [{ name: 'cnpj', label: 'CNPJ' }] } },
     {
       id: 11,
-      name: 'Certidão Negativa do FGTS',
+      name: 'Certidão Negativa do FGTS -teste',
       slug: toSlug('Certidão Negativa do FGTS'),
 
       // ⚠️ ESSENCIAL
